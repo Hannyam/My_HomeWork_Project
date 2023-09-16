@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unique Number Array</title>
+</head>
+<body>
+    <h1>Enter 35 unique numbers:</h1>
+    <input type="number" id="numberInput">
+    <button onclick="addNumber()">Add Number</button>
+    <button onclick="showArray()">Show Array</button>
+    <div id="output"></div>
+
+    <script>
+        const maxNumbers = 5;
+        const uniqueArray = [];
+
+        function addNumber() {
+            const numberInput = parseInt(document.getElementById("numberInput").value);
+
+            if (!isNaN(numberInput)) {
+                if (!uniqueArray.includes(numberInput)) {
+                    uniqueArray.push(numberInput);
+                    alert("Number added to the array.");
+                } else {
+                    alert("Number is already in the array.");
+                }
+
+                document.getElementById("numberInput").value = '';
+            } else {
+                alert("Please enter a valid number.");
+            }
+
+            if (uniqueArray.length === maxNumbers) {
+                alert("Array is full. Click 'Show Array' to view the data.");
+            }
+        }
+
+        function showArray() {
+            document.getElementById("output").textContent = "Array data: " + uniqueArray.join(", ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question 7</title>
+  <link rel="stylesheet" href="Q7.css">
+  <script src="./Q7.js" defer></script>
+</head>
+
+<body>
+  <form>
+    <label for="firstNumber">First number</label>
+    <input type="number" id="firstNumber">
+    <label for="operator">Operator</label>
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+  </select>
+    <label for="secondNumber">Second number</label>
+    <input type="number" id="secondNumber"><br/><br/>
+    <input type="button" value="Calculate" id="calculateButton" onclick="calculate()"><br/><br/>
+    <div id="output"></div><br/><br/>
+
+    <label for="multiplyNumber">Multiply Number</label>
+    <input type="number" id="multiplyNumber">
+    <label for="times">Times</label>
+    <input type="number" id="times">
+    <input type="button" value="Show" id="showButton" onclick="show()"><br/><br/>
+    <p>Results:</p>
+    <div id="outputMultiply"></div>
+  </form>
+</body>
+</html>

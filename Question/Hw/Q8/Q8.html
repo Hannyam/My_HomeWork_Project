@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question 8</title>
+  <link rel="stylesheet" href="./Q8.css">
+  <script src="./Q8.js" defer></script>
+</head>
+<body>
+   <div class="top">
+    <span id="showScore">Score :</span>
+    <button id="btnStart" class="btnStart activeStart" onclick="start()">Start</button>
+    <span id="showTimes">Time :</span>
+   </div>
+   <div class="middle">
+    Which one is big?<br/>
+    <button id="num1Btn" class="num1Btn inactiveNum1Btn" onclick="chooseOne()"></button>
+    <button id="num2Btn" class="num2Btn inactiveNum2Btn" onclick="chooseTwo()"></button>
+   </div>
+   <div class="bottom">
+    <button id="btnStop" class="btnStop inactiveStop" onclick="stop()">Stop</button>   
+   </div>
+   <b>History</b><p id="outputHistory"></p>
+</body>
+</html>

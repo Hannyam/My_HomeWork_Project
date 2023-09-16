@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    font-family: sans-serif;
+  }
+  /* For top div */
+  .top {
+    text-align: center; 
+    margin-top: 20px;
+  }
+  
+  #showScore{
+    margin-right: 300px; 
+   
+  }
+  #showTimes{
+    margin-left: 300px;
+  }
+  
+  .btnStart {
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    border:0.5px solid;
+  }
+  .activeStart{
+    background-color: lightgreen;
+  }
+  .inactiveStart{
+    background-color: gray;
+  }
+  /* For middle div */
+  .middle{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .num1Btn,.num2Btn,.num3Btn{
+    width: 10%;
+    height: 150px;
+    border-radius: 12px;
+    margin:15px 20px 0px 20px;
+    border:0.5px solid;
+  
+  }
+  .activeNum1Btn,.activeNum2Btn,.activeNum3Btn{
+   background-color: lightskyblue;
+  }
+  .inactiveNum1Btn,.inactiveNum2Btn,.inactiveNum3Btn{
+    background-color: gray;
+  }
+  /* For bottom div */
+  .bottom{
+   text-align: center; 
+    margin-top: 20px;
+   
+  }
+  .btnStop{
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    border:0.5px solid;
+  }
+  .activeStop{
+    background-color: red;
+    
+  }
+  .inactiveStop{
+    background-color: gray;
+  }
+  

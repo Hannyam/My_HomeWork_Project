@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./Calculator.css">
+    <script src="./Calculator.js" defer></script>
+</head>
+<body>
+ <div class="header">
+
+   <div class="title">Calculator Brain</div>
+
+   <div class="start"> 
+    <button id="btnStart" class="btnStart activeStart" onclick="start()">Start</button>
+   </div>
+
+   <div class="stop"> 
+   <button id="btnStop" class="btnStop inactiveStop" onclick="stop()" disabled >Stop</button>
+   </div> 
+
+ </div>
+
+ <div class="body">
+  <fieldset class="question-block">
+    <legend class="red">Question</legend>
+    <span id="q1"></span>
+    <span class="red">=></span>
+  </fieldset>
+
+  <fieldset class="answer-block">
+    <legend class="red">Answer</legend>
+    <input type="text" id="answerBox" disabled>
+  </fieldset>
+  
+  
+  <button id="userAnswer" class="ok" onclick="checkAnswer()" disabled>OK</button>
+ 
+
+  <h3 class="list">History</h3>
+  <ol id="list">
+  
+  </ol>
+</div>
+</body>
+</html>
