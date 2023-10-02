@@ -1,0 +1,210 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.title {
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+}
+.title h1{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.texts {
+    padding: 2rem 3.5rem;
+}
+.text1 h1{
+    display: inline-block;
+    font-size: 3em;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+    width: 730px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(25), cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+.text2 {
+    margin-left: 5rem;
+}
+.text2 h1{
+    display: inline-block;
+    font-size: 3em;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+    width: 450px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(15), cursor .4s step-end infinite alternate;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    padding: 2rem 4rem;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 2rem 10rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-left: 5rem;
+}
+
+.box .strapBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+.box .strapBox .strapImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.box .strapBox .strap1:checked ~ .strapImage{
+    opacity: 1;
+    background-image: url('./imgApple/strap1.png');
+}
+.box .strapBox .strap2:checked ~ .strapImage{
+    opacity: 1;
+    background-image: url('./imgApple/strap2.png');
+}
+.box .strapBox .strap3:checked ~ .strapImage{
+    opacity: 1;
+    background-image: url('./imgApple/strap3.png');
+}
+.box .strapBox .strap4:checked ~ .strapImage{
+    opacity: 1;
+    background-image: url('./imgApple/strap4.png');
+}
+.box .strapBox .strap5:checked ~ .strapImage{
+    opacity: 1;
+    background-image: url('./imgApple/strap5.png');
+}
+
+.box .caseBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+.box .caseBox .caseImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.box .caseBox .case1:checked ~ .caseImage{
+    opacity: 1;
+    background-image: url('./imgApple/case1.png');
+}
+.box .caseBox .case2:checked ~ .caseImage{
+    opacity: 1;
+    background-image: url('./imgApple/case2.png');
+}
+.box .caseBox .case3:checked ~ .caseImage{
+    opacity: 1;
+    background-image: url('./imgApple/case3.png');
+}
+.box .caseBox .case4:checked ~ .caseImage{
+    opacity: 1;
+    background-image: url('./imgApple/case4.png');
+}
+.box .caseBox .case5:checked ~ .caseImage{
+    opacity: 1;
+    background-image: url('./imgApple/case5.png');
+}
+
+.content {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .strap,
+.content .case{
+    margin: 1rem 0 1rem 0;
+}
+.content .strap p,
+.content .case p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000;
+}
+.content .strap label,
+.content .case label{
+    margin: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
+}
+
+.series{
+    width: 700px;
+    text-align: center;
+    padding: 0 5rem 2rem 5rem ;
+    color: #f00;
+    font-size: 1.2rem;
+}
+
+.save {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 10rem 5rem 0;
+}
+.save button{
+    border: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 7px;
+    background-color: #0071E3;
+    color: #fff;
+    font-size: 1.2rem;
+}

@@ -4,7 +4,7 @@
 }
 .container{
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     margin-left: 120px;
     align-items: center;
     min-height: 100vh; 

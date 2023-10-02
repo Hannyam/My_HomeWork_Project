@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  font-family: sans-serif;
+}
+/* Change bg color when select */
+*::selection{
+  background-color: lightblue;
+}
+
+/* This is for logo and title */
+.appleLogo {
+  text-align: center;
+  display: flex;
+  margin: 20px;
+}
+.appleLogo>span{
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.imglogo{
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+/* This is for typing animation */
+.typeWriter{
+  display: inline-block;
+}
+.text{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 30px;
+  letter-spacing: 3px;
+  border-right: 4px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+.l1{
+  width: 95%;
+  animation: typing 4s steps(23),cursor .4s step-end infinite alternate;
+}
+
+.l2{
+  margin-left: 70px;
+  width: 60%;
+  animation: typing 4s steps(18),cursor .4s step-end infinite alternate;
+  animation-delay: 0.2s; 
+}
+/* for cursor blinking animation */
+@keyframes cursor {
+  50%{
+      border-color: transparent;
+  }
+}
+@keyframes typing {
+  from{width: 0;}
+}
+
+/* Start the middle part */
+.middle{
+  display: flex;
+  margin: 20px 30px 0px 0px;
+  /* justify-content: space-around; */
+  gap: 10%;
+}
+
+/* Watch frame Display for customer */
+.mainFrame{
+ text-align: center;
+ padding-left: 10%;
+}
+input{
+  display: none;
+}
+.watchFrame{
+  width: 280px;
+  height: 330px;
+  margin: 20px;
+  box-shadow: 10px 10px 20px lightgray;
+  border-radius: 5px;
+  position: relative;
+ 
+}
+.watchFrame+span{
+  color: red;
+}
+
+/* for select case and strap design */
+.parts{ 
+  padding-top: 80px;
+}
+.parts > table{
+  width: 400px; 
+}
+.under{
+  position: relative;
+}
+.under::before{
+   content: "";
+   height: 1px;
+   width: 400px;
+   background-color: black;
+   position: absolute;
+   top: 100%;
+}
+/* Swap the Strap with user choice */
+#s1:checked ~ .forStrap{
+  background-image: url('./imgApple/strap1.png'); 
+  
+}
+#s2:checked ~ .forStrap{
+  background-image: url('./imgApple/strap2.png'); 
+}
+#s3:checked ~ .forStrap{ 
+  background-image: url('./imgApple/strap3.png'); 
+}
+#s4:checked ~ .forStrap{ 
+  background-image: url('./imgApple/strap4.png'); 
+}
+#s5:checked ~ .forStrap{ 
+  background-image: url('./imgApple/strap5.png');
+}
+/* Swap the case with user choice */
+#c1:checked ~ .forCase{ 
+  background-image: url('./imgApple/case1.png');
+}
+#c2:checked ~ .forCase{ 
+  background-image: url('./imgApple/case2.png');
+}
+#c3:checked ~ .forCase{ 
+  background-image: url('./imgApple/case3.png');
+}
+#c4:checked ~ .forCase{ 
+  background-image: url('./imgApple/case4.png');
+}
+#c5:checked ~ .forCase{ 
+  background-image: url('./imgApple/case5.png');
+}
+  /* Merge Strap image and Case image */
+.forCase,
+.forStrap {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 2s;
+}
+/* End the middle part */
+
+/* save button */
+.end{
+  padding-bottom: 50px;
+ 
+}
+button{
+  width: 70px;
+  height: 30px;
+  background-color: rgb(75, 127, 238);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  right: 40px;
+}

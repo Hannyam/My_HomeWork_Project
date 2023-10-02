@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.bgimg {
+  position: relative;
+  background-image: url(./img/underwater.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logoimg {
+  width: 100%;
+}
+
+.signin {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 120px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.signin:hover {
+  background-color: #1192c9;
+}
+
+.btext {
+  position: absolute;
+  top: 20%;
+  color: white;
+  left: 8%;
+  font-size: 120px;
+  text-shadow: 0px 0px 10px cyan;
+}
+
+.stext {
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  width: 40%;
+  padding: 30px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px cyan;
+}
+
+.stext_sm {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  width: 40%;
+  padding: 30px;
+  color: white;
+  font-size: 1.5vw;
+  text-shadow: 0px 0px 10px cyan;
+}
+
+.fish1,.fish2,.fish3,.fish4{
+  width: 10%;
+  position: absolute;
+  right: 0%;
+}
+
+.fish1 {
+  top: 50%;
+  animation: fish1 5s linear infinite;
+}
+
+.fish2 {
+  top: 10%;
+  animation: fish2 10s linear infinite;
+}
+
+.fish3 {
+  top: 70%;
+  animation: fish1 12s linear infinite;
+}
+
+.fish4 {
+  top: 30%;
+  animation: fish2 4s linear infinite;
+}
+
+@keyframes fish1 {
+  0% {
+    left: 85%;
+    transform: translateY(-50px) rotate(-20deg);
+  }
+  20% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  40% {
+    transform: translateY(50px) rotate(20deg);
+  }
+  60% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  80% {
+    transform: translateY(-50px) rotate(-20deg);
+  }
+  100% {
+    left: -10%;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes fish2 {
+  0% {
+    left: 85%;
+    transform: translateY(-50px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(50px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-50px);
+  }
+  100% {
+    left: -10%;
+    transform: translateY(0px);
+  }
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 30%;
+  height: 70px;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 3px solid white;
+  color: white;
+  font-size: 30px;
+}
+
+.play:hover {
+  background-color: #1192c9;
+  cursor: pointer;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0%;
+  margin: auto;
+}
+
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8 {
+  width: 60px;
+  margin: 80px;
+}
+
+.b1 {
+  animation: bubble 2s linear infinite;
+}
+
+.b1 {
+  animation: bubble 3s linear infinite;
+}
+
+.b2 {
+  animation: bubble 4s linear infinite;
+}
+
+.b3 {
+  animation: bubble 5s linear infinite;
+}
+
+.b4 {
+  animation: bubble 7s linear infinite;
+}
+
+.b5 {
+  animation: bubble 8s linear infinite;
+}
+
+.b6 {
+  animation: bubble 9s linear infinite;
+}
+
+.b7 {
+  animation: bubble 10s linear infinite;
+}
+
+.b8 {
+  animation: bubble 6s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-100px);
+  }
+  40% {
+    transform: translateY(-200px);
+  }
+  60% {
+    transform: translateY(-300px);
+  }
+  80% {
+    transform: translateY(-400px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}

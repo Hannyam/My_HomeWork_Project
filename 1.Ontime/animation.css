@@ -1,0 +1,52 @@
+/* .box{
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    border-radius: 50%;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: 2; 
+}
+
+@keyframes move {
+    from{
+      transform: translateX(0px);
+    }
+    to{
+        background-color: blueviolet;
+        
+        transform: translateX(300px) translateY(100px) rotate(360deg);
+    }   
+} */
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    border-radius: 50%;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes move {
+    0%{
+      transform: translateX(-100px);
+    }
+    25%{
+        transform: translateY(100px) translateY(200px);
+    }
+    50%{
+        transform: translateY(0px) translateY(400px) rotate(15deg);
+    }
+    75%{
+        transform: translateY(100px) translateY(600px);
+    }
+    100%{
+        background-color: blueviolet;
+        
+        transform:translateY(100px) translateX(1000px) rotate(15deg);
+    }   
+}

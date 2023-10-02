@@ -1,0 +1,200 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ 
+}
+body {
+  background-image: url("./img/underwater.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* for top section */
+.imglogo{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.imglogo>img{
+  border-radius: 50%;
+}
+/* SignIn button */
+.imglogo+button{
+  height: 35px;
+  width:100px;
+  color: white;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  border-radius: 30px;
+  border:0.5px solid white;
+  background-color: transparent;
+}
+.imglogo+button:hover{
+  background-color: skyblue;
+}
+/* for fish, bubble and others...  */
+.fishdiv{
+  position: absolute;
+}
+
+.bluefish {
+  width: 150px;
+  height: 100px;
+  animation: fishmove 8s linear 0s infinite reverse;
+}
+
+.bluefish1 {
+  width: 150px;
+  height: 100px;
+  animation: fishmove 8s ease-in -4s infinite reverse;
+}
+
+.yellowfish {
+  width: 150px;
+  height: 100px;
+  animation: fishmove2 5s ease-out -2s infinite reverse;
+}
+.yellowfish1 {
+  width: 150px;
+  height: 100px;
+  animation: fishmove 6s ease-in -4s infinite reverse;
+}
+.fishcouple{
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 100px;
+}
+/* .diver{
+  animation: fishmove1 10s ease-in -2s infinite reverse;
+} */
+.fishcouple{
+  animation: fishmove1 8s linear 0s infinite reverse;
+}
+.mermaid{
+  position: absolute;
+  top: 90%;
+  width: 210px;
+  height: 100px;
+  animation: fishmove1 8s linear 0s infinite reverse  ;
+}
+.divbubble{
+  position: absolute;
+  bottom: 0px;
+}
+
+.bubble{
+   width: 50px;
+   height: 50px;
+   animation-name: bubblemove;
+   animation-delay: calc(var(--i) * -0.5s);
+   animation-duration: 6s;
+   animation-timing-function: linear;
+   animation-direction: normal;
+   animation-iteration-count: infinite;
+   
+}
+@keyframes fishmove {
+  0% {
+    transform: translateX(-110px);
+  }
+  20% {
+    transform: translateY(100px) translateX(200px);
+  }
+  40% {
+    transform: translateY(0px) translateX(400px) rotate(-11deg);
+  }
+  60% {
+    transform: translateY(100px) translateX(600px);
+  }
+  80% {
+    transform: translateY(100px) translateX(800px) rotate(-11deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(1000px);
+  }
+}
+@keyframes fishmove2 {
+  0% {
+    transform: translateX(-110px);
+  }
+  20% {
+    transform: translateY(30px) translateX(200px);
+  }
+  40% {
+    transform: translateY(0px) translateX(400px) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(30px) translateX(600px);
+  }
+  80% {
+    transform: translateY(0px) translateX(800px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(30px) translateX(1000px);
+  }
+}
+@keyframes fishmove1 {
+  0% {
+    transform: translateY(-50px);
+    right: 100%;
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px) rotate(-10deg);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px) rotate(-10deg);
+    right: -600%;
+  }
+}
+@keyframes bubblemove {
+  0%{
+    transform: translateY(-10px) translateX(calc(var(--i) * 100px));
+    opacity: 2;
+  }
+  60%{
+      transform: translateY(-400px) translateX(calc(var(--i) * 100px));
+      
+  }
+  100%{
+    transform: translateY(-500px) translateX(calc(var(--i) * 100px));
+    opacity: 0;
+  } 
+}
+
+/* for the middle text section */
+.middle{
+  width: 50%;
+  color: white;
+  text-shadow: 5px 5px 10px white;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.title{
+  font-size: 70px;
+}
+
+.playBtn{
+  height: 40px;
+  width: 70%;
+  color: white;
+  font-size: 18px;
+  margin-left: 50%;
+  border: solid white;
+  background-color: transparent;
+  border-radius: 20px;
+}
+.playBtn:hover{
+  background-color: skyblue;
+}

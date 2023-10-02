@@ -1,0 +1,269 @@
+:root {
+  --primaryColor: red;
+  --secondaryColor: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+  transition: all 1s;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  box-shadow: 1px 1px 10px rgb(84, 84, 84);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a > ion-icon,
+label > ion-icon {
+  font-size: 1.8em;
+}
+
+span {
+  font-size: 1.6em;
+}
+
+ul {
+  display: flex;
+}
+
+ul > li {
+  display: inline;
+  font-size: 1em;
+  margin: 1.5em;
+  color: whitesmoke;
+  position: relative;
+}
+
+ul > li:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  transform: scaleX(0);
+  height: 2px;
+  transform-origin: top left;
+  background-color: gold;
+  transition: all 1s;
+}
+
+ul > li:hover::after {
+  transform: scaleX(2);
+}
+
+ion-icon {
+  color: skyblue;
+}
+
+[name="menu"] {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.herosection {
+  margin: 3em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.herosection > .image {
+  width: 30%;
+}
+
+.herosection > .des {
+  margin: 3em;
+  width: 70%;
+}
+
+.des > p {
+  font-size: 0.9em;
+  opacity: 0.6;
+}
+
+.des > button {
+  margin-top: 1em;
+  font-size: 1em;
+  background-color: skyblue;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border-style: none;
+}
+
+.des > button:hover {
+  background-color: gold;
+}
+
+.des > p + p {
+  margin: 0.5em;
+  font-size: 1.5em;
+  opacity: 1;
+}
+
+.content {
+  text-align: center;
+}
+
+.content > p {
+  margin: 1em 4em;
+  opacity: 0.6;
+}
+
+.lineup {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 280px;
+  height: 280px;
+  margin: 1em;
+  display: none;
+  transition: all 1s linear;
+}
+.card > img {
+  padding-top: 1em;
+}
+
+.card > p {
+  color: white;
+  font-size: 1.4em;
+}
+
+.card > p:last-child {
+  font-size: 1em;
+}
+
+.banner {
+  position: relative;
+  box-shadow: -5px -5px 10px grey;
+  opacity: 0.9;
+}
+
+.bannerTitle {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.bannerTitle > h2,
+.bannerTitle > p {
+  color: black;
+  font-size: 1.2em;
+}
+
+hr {
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.footer {
+  box-shadow: -2px -2px 10px gray;
+  padding-top: 2em;
+  text-align: center;
+  width: 100%;
+} 
+
+.footer > p {
+  opacity: 0.7;
+  padding: 0.5em 5em;
+}
+
+.footer > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer > ul > li {
+  font-size: 1.7em;
+}
+
+#series7,#series8{
+  font-size: 20px;
+  margin: 20px;
+}
+
+#watch7:checked ~ .lineup  .w7{
+  display: block;
+}
+
+#watch8:checked  ~ .lineup  .w8{
+  display: block;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  [name="menu"] {
+    display: block;
+  }
+
+  [name="cart"] {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .herosection {
+    margin: 0em;
+    margin-top: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .herosection > .des {
+    margin: 1em;
+  }
+
+  #check:checked ~ .mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 3px grey;
+  }
+
+  .herosection > .image {
+    width: 50%;
+  }
+  .content {
+    margin-top: 3em;
+  }
+
+  .bannerTitle > h2,
+  .bannerTitle > p {
+    font-size: 0.7em;
+  }
+}
