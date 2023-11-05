@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="./Q18.css">
+    <script src="./Q18.js" defer></script>
+</head>
+<body>
+    <!-- to show Holiday List-->
+    <div class="show">
+        <input type="checkbox" id="showCheckbox" onchange="showList()"> Show Holiday List 
+    </div>
+   
+    <div class="hidden" id="showDiv">  
+        <div class="showHoliday">
+           <p> ---- Holiday --- </p><br/>
+           <div id="showHdy">
+            
+           </div>
+        </div>
+    </div>
+
+    <!-- header-->
+    <div>
+        <h1>Calendar</h1>
+    </div>
+    <div class="firstPart">
+       <div>
+        <p>Year</p>
+        <input type="number" id="year" oninput="checkInput(this,4)">
+       </div>
+       <div>
+        <p>Month</p>
+        <input type="number" id="month" oninput="checkInput(this,2)">
+       </div>
+       <div>
+        <button id="btnShow" onclick="show()">Show</button>
+       </div>
+    </div>
+    <!-- header-->
+
+    <div class="calendar">
+        <div class="week">
+            <div class="dayName title">SUN</div>
+            <div class="dayName title">MON</div>
+            <div class="dayName title">TUE</div>
+            <div class="dayName title">WED</div>
+            <div class="dayName title">THU</div>
+            <div class="dayName title">FRI</div>
+            <div class="dayName title">SAT</div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+        <div class="week">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+        </div>
+    </div>
+     <!-- Bottom Part-->
+     <div class="lastPart">
+       <input type="date" id="holiday">
+       <input type="text" id="holidayName" placeholder="Holiday name">
+       <button id="btnAdd" onclick="clickbtnAdd()">Add Holiday</button>
+     </div>
+    
+</body>
+</html>

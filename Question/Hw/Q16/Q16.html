@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Design</title>
+  <link rel="stylesheet" href="./Q16.css">
+  <script src="./Q16.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  
+  <div class="theme">
+    Theme --
+    <label for="black"><span>Black</span></label>
+    <label for="white"><span>White</span></label>
+    <label for="pink"><span>Pink</span></label>
+  </div>
+  
+  <input type="radio" id="black"  name="theme">
+  <input type="radio" id="white"  name="theme">
+  <input type="radio" id="pink"  name="theme">
+  
+
+  <div class="topPart">
+    <h3>String Method Playground</h3>
+    <div class="display">
+      <div id="displayBox"></div>
+    </div>
+    <label for="typebox">Type Number of "charAt(), charCodeAt(), includes() , indexOf(), lastIndexOf() , StartsWith(), EndsWith()" </label>
+    <input id="typebox" type="text" placeholder="Type Number" value=""><label id="alertType"></label>
+    <div>
+      <button onclick="clickCharAt()">charAt()</button>
+      <button onclick="charCodeAt()">charCodeAt()</button>
+      <button onclick="toUpperCase()">toUpperCase()</button>
+      <button onclick="toLowerCase()">toLowerCase()</button>
+      <button onclick="clickTrim()">trim()</button> 
+      <button onclick="clickInclude()">includes()</button>
+      <button onclick="clickIndexOf()">indexOf()</button>
+      <button onclick="clickLastIndexOf()">lastIndexOf</button>
+      <button onclick="clickStartsWith()">StartsWith()</button>
+      <button onclick="clickEndsWith()">EndsWith()</button>
+    </div>
+    
+  </div>
+  <!-- this is for keyboard part -->
+  <div class="container">
+   
+    <div class="row one">
+      <button onclick="clickBtn(this)">~</button>
+      <button onclick="clickBtn(this)">1</button>
+      <button onclick="clickBtn(this)">2</button>
+      <button onclick="clickBtn(this)">3</button>
+      <button onclick="clickBtn(this)">4</button>
+      <button onclick="clickBtn(this)">5</button>
+      <button onclick="clickBtn(this)">6</button>
+      <button onclick="clickBtn(this)">7</button>
+      <button onclick="clickBtn(this)">8</button>
+      <button onclick="clickBtn(this)">9</button>
+      <button onclick="clickBtn(this)">10</button>
+      <button onclick="clickBtn(this)">-</button>
+      <button onclick="clickBtn(this)">=</button>
+      <button class="clear key" onclick="clearBtn()">Clear</button>
+    </div>
+
+    <div class="row two">
+      <button class="tab" onclick="clickTab()">Tab</button>
+      <button class="key" onclick="clickBtn(this)">q</button>
+      <button class="key" onclick="clickBtn(this)">w</button>
+      <button class="key" onclick="clickBtn(this)">e</button>
+      <button class="key" onclick="clickBtn(this)">r</button>
+      <button class="key" onclick="clickBtn(this)">t</button>
+      <button class="key" onclick="clickBtn(this)">y</button>
+      <button class="key" onclick="clickBtn(this)">u</button>
+      <button class="key" onclick="clickBtn(this)">i</button>
+      <button class="key" onclick="clickBtn(this)">o</button>
+      <button class="key" onclick="clickBtn(this)">p</button>
+      <button class="key" onclick="clickBtn(this)">[</button>
+      <button onclick="clickBtn(this)">]</button>
+      <button class="slash" onclick="clickBtn(this)">/</button>
+    </div>
+   
+    <div class="row three">
+      <input id="myCheckbox" type="checkbox"> 
+      <label for="myCheckbox"><button class="caps key" id="caps" onclick="capsBtn(this)">caps</button></label>
+      <button class="key" onclick="clickBtn(this)">a</button>
+      <button class="key" onclick="clickBtn(this)">s</button>
+      <button class="key" onclick="clickBtn(this)">d</button>
+      <button class="key" onclick="clickBtn(this)">f</button>
+      <button class="key" onclick="clickBtn(this)">g</button>
+      <button class="key" onclick="clickBtn(this)">h</button>
+      <button class="key" onclick="clickBtn(this)">j</button>
+      <button class="key" onclick="clickBtn(this)">k</button>
+      <button class="key" onclick="clickBtn(this)">l</button>
+      <button class="key" onclick="clickBtn(this)">;</button>
+      <button onclick="clickBtn(this)">'</button>
+      <button class="key enter" onclick="clickBackspace()">Backspace</button>
+    </div>
+    
+    <div class="row four">
+      <button class="shift">Shift</button>
+      <button class="key" onclick="clickBtn(this)">z</button>
+      <button class="key" onclick="clickBtn(this)">x</button>
+      <button class="key" onclick="clickBtn(this)">c</button>
+      <button class="key" onclick="clickBtn(this)">v</button>
+      <button class="key" onclick="clickBtn(this)">b</button>
+      <button class="key" onclick="clickBtn(this)">n</button>
+      <button class="key" onclick="clickBtn(this)">m</button>
+      <button onclick="clickBtn(this)"> < </button>
+      <button onclick="clickBtn(this)">></button>
+      <button onclick="clickBtn(this)">?</button>
+      <button class="shift">Shift</button>
+    </div>
+    <div class="row five">
+      <button class="key" onclick="clickBtn(this)">Ctrl</button>
+      <button><ion-icon name="logo-windows"></ion-icon></button>
+      <button onclick="clickBtn(this)">Alt</button>
+      <button class="space key" id="spaceBtn" onclick="clickBtn(this)">space</button>
+      <button onclick="clickBtn(this)">Alt</button>
+      <button><ion-icon name="logo-windows"></ion-icon></button>
+      <button class="key" onclick="clickBtn(this)">Ctrl</button>
+    </div>
+  </div>
+</body>
+
+</html>

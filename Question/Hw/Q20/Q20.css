@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(229, 248, 254);
+}
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+}
+
+.card{
+    height:550px;
+    width: 500px;
+    border: none;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    box-shadow: 3px 3px 3px grey;
+    
+}
+.gender{
+    width: 50px;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.male{
+    background-color: skyblue;
+}
+.female{
+    background-color: deeppink;
+}
+.imgdiv{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 300px;
+   
+    /* background-image: url('./img/img1.jpg');  */
+}
+
+.info1{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.name{
+   font-size: 19px;
+   font-weight: bolder;
+   margin:10px 0px 10px 0px;
+   
+}
+.des{
+  text-align: left;
+  font-size: 15px;
+}
+
+.catagory{
+    width: 100px;
+    height: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: orangered;
+    padding: 10px;
+}
+ion-icon{
+    color: rgb(254, 214, 9);
+    font-size: 19px;
+    margin-right: 10px;
+   
+}
+.rate{
+  padding: 10px;
+  font-weight: bold;
+
+}
+.info2{  
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.colors,.size,.info3{
+    display: flex;
+    justify-content: space-between;
+}
+.color{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px;
+    border: 1px solid black;
+    /* background-color: red; */
+}
+.size{
+    padding-top: 15px;
+    width: 40%;
+    font-size: 19px;
+    font-weight: bold;
+}
+.opacity05{
+    opacity: 0.5;
+}
+.stock{
+   
+    color: rgb(5, 187, 126);
+}
+.info3{
+  width: 400px;
+  margin-top: 15px;
+  /* font-weight: bold; */
+}
+.oldprice{
+   text-decoration: line-through;
+   padding-top: 5px;
+}
+.notshow{
+    display:none;
+}
+.newprice{
+    font-size: 25px;
+}
+
+.off{
+    color: red;
+    font-size: 22px;
+}

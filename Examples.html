@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Unique Number Array</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profiles</title>
+  <style>
+    .student-profile {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Enter 35 unique numbers:</h1>
-    <input type="number" id="numberInput">
-    <button onclick="addNumber()">Add Number</button>
-    <button onclick="showArray()">Show Array</button>
-    <div id="output"></div>
+  <div id="studentProfilesContainer"></div>
 
-    <script>
-        const maxNumbers = 5;
-        const uniqueArray = [];
+  <script>
+    const students = [
+      { id: 1, name: 'Student 1', age: 18, grade: 'A', imageUrl: './Question/Hw/Q20/img/img1.jpg' },
+      { id: 2, name: 'Student 2', age: 17, grade: 'B', imageUrl: './Question/Hw/Q20/img/img2.jpg' },
+      // ... other student objects
+    ];
 
-        function addNumber() {
-            const numberInput = parseInt(document.getElementById("numberInput").value);
+    function createStudentProfile(student) {
+      const profileDiv = document.createElement('div');
+      profileDiv.className = 'student-profile';
+      profileDiv.style.backgroundImage = `url(${student.imageUrl})`;
+      profileDiv.textContent = `Name: ${student.name}\nAge: ${student.age}\nGrade: ${student.grade}`;
+      return profileDiv;
+    }
 
-            if (!isNaN(numberInput)) {
-                if (!uniqueArray.includes(numberInput)) {
-                    uniqueArray.push(numberInput);
-                    alert("Number added to the array.");
-                } else {
-                    alert("Number is already in the array.");
-                }
+    function displayStudentProfiles() {
+      const container = document.getElementById('studentProfilesContainer');
+      students.forEach(student => {
+        const profileDiv = createStudentProfile(student);
+        container.appendChild(profileDiv);
+      });
+    }
 
-                document.getElementById("numberInput").value = '';
-            } else {
-                alert("Please enter a valid number.");
-            }
-
-            if (uniqueArray.length === maxNumbers) {
-                alert("Array is full. Click 'Show Array' to view the data.");
-            }
-        }
-
-        function showArray() {
-            document.getElementById("output").textContent = "Array data: " + uniqueArray.join(", ");
-        }
-    </script>
+    // Call the function to display student profiles
+    displayStudentProfiles();
+  </script>
 </body>
+
 </html>

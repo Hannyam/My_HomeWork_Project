@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+/* For all image cards */
+.container .card{
+    cursor: pointer;
+}
+.container{
+    height: 600px;
+    width: 1400px;
+    background-color: plum;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+.card{
+   height:200px;
+   width: 150px;
+   margin: 10px;
+   border-radius: 10px;
+   box-shadow: 5px 5px 7px black;
+   position: relative;
+   transform-style: preserve-3d;
+   border: 1px solid white;
+   /* display: none; */
+  
+}
+.back,.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* animation: move 2s linear 1; */
+}
+@keyframes move{
+    0%{
+     opacity: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+       
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* .back{
+    backface-visibility: visible;
+} */
+   
+.back{ 
+    /* to view full image */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);  
+    border-radius: 10px; 
+}
+
+.front{
+    text-align: center;
+    font-size: 60px;
+    /* color: white; */
+    border-radius: 10px; 
+    background-color: black;
+}
+
+/* this is end part */
+#timer{
+    font-size: 55px;
+    margin-top: 20px;
+    padding-left: 30px;
+    /* animation: fadeInOut 2s infinite; */
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        
+    }
+    50% {
+        opacity: 1;
+        
+    }
+    100% {
+        opacity: 0;
+        
+    }
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+}
+
+.activeStart:hover{
+    background-color: deeppink;
+}
+#btnStart:active{
+    background-color: black;
+    
+}
+.activeStart{
+    background-color: darkorange;
+  }
+ .inactiveStart{
+    background-color: gray;
+}
+
+
+
+/* for win message */
+#winMessage{
+    font-size: 55px;
+    font-weight: bold;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#btnRestart{
+    height: 90px;
+    width: 330px;
+    font-size: 30px;
+    background-color: deeppink;
+    display: none;
+}
+#btnRestart:hover{
+    background-color: green;
+}
+#aftergame{
+    position: absolute;
+    top: 1%;
+    margin-top: 250px;
+    height: 90px;
+}

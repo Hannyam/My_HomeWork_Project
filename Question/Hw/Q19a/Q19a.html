@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card</title>
+    <link rel="stylesheet" href="./Q19a.css">
+    <script src="./Q19a.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    
+    <!-- for the image cards -->
+    <div class="container">
+        <div class="card" id="card1" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="1"></div>
+        </div>
+        <div class="card" id="card2" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="2"></div>
+        </div>
+        <div class="card" id="card3" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="3"></div>
+        </div>
+        <div class="card" id="card4" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="4"></div>
+        </div>
+        <div class="card" id="card5" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="5"></div>
+        </div>
+        <div class="card" id="card6" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="6"></div>
+        </div>
+        <div class="card" id="card7" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="7"></div>
+        </div>
+        <div class="card" id="card8" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="8"></div>
+        </div>
+        <div class="card" id="card9" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="9"></div>
+        </div>
+        <div class="card" id="card10" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="10"></div>
+        </div>
+        <div class="card" id="card11" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="11"></div>
+        </div>
+        <div class="card" id="card12" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="12"></div>
+        </div>
+        <div class="card" id="card13" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="13"></div>
+        </div>
+        <div class="card" id="card14" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="14"></div>
+        </div>
+        <div class="card" id="card15" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="15"></div>
+        </div>
+        <div class="card" id="card16" onclick="clickCard(this)">
+            <div class="front"><br/><ion-icon name="help-outline"></ion-icon></div>
+            <div class="back" id="16"></div>
+        </div>
+        
+    </div>
+    <!-- for start btn and win Message -->
+    <div class="endPart"> 
+        <button id="btnStart" onclick="clickStart()" class="activeStart">Start</button>  
+        <span id="timer"></span> <br/>
+        
+    </div>
+
+    <div id="aftergame">
+        <p id="winMessage"></p>
+        <button id="btnRestart" onclick="clickRestart()" ><ion-icon name="refresh"></ion-icon>&nbsp;Restart</button> 
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,207 @@
+*{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(214, 214, 214);
+}
+
+#ta{
+  
+  border-right: 1px solid rgb(216, 24, 24);
+}
+
+/* for Theme div */
+.theme{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  padding: 5px;
+  border: none;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(216,236,213,1) 23%, rgba(247,111,111,1) 50%, rgba(252,176,69,1) 100%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #858383, -5px -5px 10px #858383;
+ 
+}
+.theme span:hover{
+  color: white;
+  font-size: 20px;
+}
+#black,#white,#pink{
+  display: none;
+}
+/* for black theme */
+#black:checked ~.topPart> h3{
+  color: white;
+}
+#black:checked ~ .topPart>div>button,
+#black:checked ~ .container>div>button{
+  color: rgb(255, 255, 255);
+ background-color: black;
+ box-shadow: 5px 5px 10px #0a0a0a, -5px -5px 10px #858383;
+}
+/* #black:checked ~ .topPart,
+#black:checked ~ .container{
+  background-color: black;
+} */
+#black:checked ~ .topPart>div>button:active,
+#black:checked ~ .container>div>button:active{
+  box-shadow: 1px 1px 2px #858383,-1px -1px 2px #0a0a0a;
+  background-image:linear-gradient(white,black);
+}
+#black:checked ~ .topPart>div>button:hover{
+  background-color: gainsboro;
+}
+#black:checked ~ .container>div>button:hover{
+  background-color: gainsboro;
+}
+
+/* for pink theme */
+#pink:checked ~ .topPart>div>button,
+#pink:checked ~ .container>div>button{
+  color: black;
+ background-color: rgb(224, 110, 207);
+ box-shadow: 5px 5px 10px  #474343, -5px -5px 10px #fff8f8;
+}
+/* #pink:checked ~ .topPart,
+#pink:checked ~ .container{
+  background-color: rgb(244, 193, 243);
+} */
+#pink:checked ~ .topPart>div>button:active,
+#pink:checked ~ .container>div>button:active{
+  box-shadow: 1px 1px 2px #fff8f8,-1px -1px 2px #474343;
+  background-image:linear-gradient(white,white,rgb(229, 95, 229));
+ 
+}
+#pink:checked ~ .topPart>div>button:hover{
+  background-color: rgb(244, 193, 243);
+}
+#pink:checked ~ .container>div>button:hover{
+  background-color: #fff8f8;
+  /* background-color: rgb(244, 193, 243); */
+}
+/* this is for top part */
+.topPart{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-top: 20px;
+}
+/* for Display Typing box */
+.display{
+  width: 60%;
+  height: 60px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 20px;
+  border: 1px solid black;
+}
+#displayBox{
+ margin: 5px;
+ padding-top: 10px;
+ font-size: 21px;
+ overflow: auto;
+ white-space: nowrap;
+}
+/* labels for text box */
+.topPart>label{
+  color: brown;
+}
+.topPart>input{
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 20%;
+  margin: 10px;
+}
+#alertType{
+  color: rgb(215, 132, 8);
+  margin-bottom: 5px;
+}
+/* function Buttons */
+.topPart>div>button{
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  margin: 2px;
+  background-color: rgb(214, 214, 214);
+  box-shadow: 5px 5px 10px #474343, -5px -5px 10px #FFF;
+}
+.topPart>div>button:hover{
+  background-color: white;
+}
+
+/* this is for keyboard part */
+.container{
+    padding: 30px 0px 0px 0px;
+    /* padding-left: 20%;    */
+
+}
+.row{
+  width: 100%;
+  height:60px;
+}
+.one,.two,.three,.four,.five{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.row>button,.row .caps{
+  color: black;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: rgb(214, 214, 214);
+  box-shadow: 5px 5px 10px #474343, -5px -5px 10px #FFF;
+  font-size: 20px;
+  margin-left: 10px;
+  outline: none;
+  
+  border-radius: 10px;
+}
+button:active,.topPart>div>button:active{
+  box-shadow: 1px 1px 2px #fff8f8,-1px -1px 2px #474343;
+}
+button:hover,#caps:hover{
+  background-color: white;
+}
+
+.row>.clear{
+  width: 115px;
+  border-radius: 10px;
+}
+.row>.tab,.row>.slash{
+  width:85px;
+  border-radius: 10px;
+}
+#myCheckbox:checked+label>#caps{
+  background-color: rgb(247, 63, 94);
+}
+#myCheckbox{
+  display: none;
+}
+
+.row .caps{
+  width:100px;
+  border-radius: 10px;
+}
+
+.row>.enter{
+  width:135px;
+  border-radius: 10px;
+}
+.row>.shift{
+  width: 150px;
+  border-radius: 10px;
+}
+.five>.space{
+  width: 400px;
+}
+.five>button{
+  width: 82px;
+}
+
+

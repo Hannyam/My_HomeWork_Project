@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="playground">
+      <div class="console">
+        <p class="title">String Method Playground</p>
+        <div class="showbox" id="showbox"></div>
+        <label for="number"
+          >Type Number for
+          charAt,charCodeAt,includes,indexOf,lastIndexOf,startsWith,endsWith</label
+        >
+        <input type="textr" id="number" class="numberbx" />
+        <div class="methods">
+          <button class="method" onclick="charAt()">charAt()</button>
+          <button class="method" onclick="charCodeAt()">charCodeAt()</button>
+          <button class="method">toUpperCase()</button>
+          <button class="method">toLowerCase()</button>
+          <button class="method">trim()</button>
+          <button class="method">includes()</button>
+          <button class="method">indexOf()</button>
+          <button class="method">lastIndexOf()</button>
+          <button class="method">startsWith()</button>
+          <button class="method">endsWith()</button>
+        </div>
+      </div>
+      <div class="keyboard">
+        <input type="checkbox" id="check" hidden />
+        <label class="caplock" for="check">CapLock</label>
+        <button class="key" onclick="press(this);">a</button>
+        <button class="key" onclick="press(this);">b</button>
+        <button class="key" onclick="press(this);">c</button>
+        <button class="key" onclick="press(this);">d</button>
+        <button class="key" onclick="press(this);">e</button>
+        <button class="key" onclick="press(this);">f</button>
+        <button class="key" onclick="press(this);">g</button>
+        <button class="key" onclick="press(this);">h</button>
+        <button class="key" onclick="press(this);">I</button>
+        <button class="key" onclick="press(this);">j</button>
+        <button class="key" onclick="press(this);">k</button>
+        <button class="key" onclick="press(this);">l</button>
+        <button class="key" onclick="press(this);">m</button>
+        <button class="key" onclick="press(this);">n</button>
+        <button class="key" onclick="press(this);">o</button>
+        <button class="key" onclick="press(this);">p</button>
+        <button class="key" onclick="press(this);">q</button>
+        <button class="key" onclick="press(this);">r</button>
+        <button class="key" onclick="press(this);">s</button>
+        <button class="key" onclick="press(this);">t</button>
+        <button class="key" onclick="press(this);">u</button>
+        <button class="key" onclick="press(this);">v</button>
+        <button class="key" onclick="press(this);">w</button>
+        <button class="key" onclick="press(this);">x</button>
+        <button class="key" onclick="press(this);">y</button>
+        <button class="key" onclick="press(this);">z</button>
+
+        <button class="key space" onclick="press(this);"> </button>
+        <button class="key number" onclick="press(this);">1</button>
+        <button class="key number" onclick="press(this);">2</button>
+        <button class="key number" onclick="press(this);">3</button>
+        <button class="key number" onclick="press(this);">4</button>
+        <button class="key number" onclick="press(this);">5</button>
+        <button class="key number" onclick="press(this);">6</button>
+        <button class="key number" onclick="press(this);">7</button>
+        <button class="key number" onclick="press(this);">8</button>
+        <button class="key number" onclick="press(this);">9</button>
+        <button class="key number" onclick="press(this);">0</button>
+        <button class="key number space" onclick="cleartext();">Clear</button>
+      </div>
+    </div>
+  </body>
+</html>
