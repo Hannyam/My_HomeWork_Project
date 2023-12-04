@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typed Number Display</title>
+</head>
+<body>
+
+    <h1>Typed Number Display</h1>
+    
+    <p>Press a number key on your keyboard:</p>
+
+    <p id="typedNumber"></p>
+
+    <script>
+        // Function to handle keyup event
+        function displayTypedNumber(event) {
+            // Get the key code of the pressed key
+            var keyCode = event.keyCode;
+
+            // Check if the pressed key is a number (48-57 corresponds to the numeric keys)
+            if (keyCode >= 48 && keyCode <= 57) {
+                // Display the typed number
+                document.getElementById("typedNumber").innerHTML = "Typed Number: " + String.fromCharCode(keyCode);
+            }
+        }
+
+        // Attach the keyup event listener to the document
+        window.addEventListener("keyup", displayTypedNumber);
+    </script>
+
+</body>
+</html>

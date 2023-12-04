@@ -1,0 +1,13 @@
+*{
+    font-size: 35px;
+}
+div{
+    height: 300px;
+    width: 700px;
+    border: 1px solid pink;
+    overflow: scroll;
+   
+}
+button{
+    display: none;
+}

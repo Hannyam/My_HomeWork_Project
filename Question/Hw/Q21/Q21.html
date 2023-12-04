@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate</title>
+  <link rel="stylesheet" href="./Q21.css">
+  <script src="./Q21.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font-awesome link - https://fontawesome.com/v4/icons/ -->
+</head>
+
+<body>
+  <div class="converter">
+    <h2>Currency Converter</h2>
+    <!-- div for convert currency -->
+    <div class="change">
+      <div class="from">
+        <p>From</p>
+        <div class="box">
+          <img src="https://flagsapi.com/US/flat/64.png">
+          <select id="fromCurrency">
+            <option value="eur">USD</option>
+          </select>
+        </div>
+      </div>
+      <div class="icon"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+      <div class="to">
+        <p>To</p>
+        <div class="box">
+          <!-- country flag logo -->
+          <img id="flagImg" src="https://flagsapi.com/BE/flat/64.png"> 
+          <select id="toCurrency">
+            <!-- Add currencies as needed -->
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- div for input USD amount -->
+    <div class="amount">
+      <p>Enter USD Amount :</p>
+      <input type="number" id="userInput" placeholder="Type USD amount....">
+    </div>
+    <!-- div To show Converted amount -->
+    <div class="exchangeRate" id="convertedAmount"></div>
+  </div>
+</body>
+
+</html>

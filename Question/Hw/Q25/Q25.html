@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./Q25.css">
+    <script src="./jquery3.6.0.js"></script>
+    <script src="./Q25.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div id="mode">
+        <ion-icon name="moon-sharp"></ion-icon>
+    </div>
+    <div class="container">
+        <div id="profile">
+            <div class="img">
+               <img src="./profile.png" alt="profile pic" width="100%">
+            </div> 
+            <div>
+                <p class="name">John Smith</p>
+                <p class="job">Software Developer</p>
+            </div>  
+        </div>
+        
+        <div id="contact">
+           <div><ion-icon name="laptop-outline"></ion-icon><input type="text" class="position" value="Front End Developer"></div>
+           <div><ion-icon name="logo-facebook"></ion-icon><input type="text" class="fb" value="www.facebook.com/john"></div>
+           <div><ion-icon name="logo-instagram"></ion-icon><input type="text" class="ig" value="www.instagram.com/john"></div>
+           <div><ion-icon name="language-outline"></ion-icon><input type="text" class="lang" value="English , French , Japanese"></div>
+           <div><ion-icon name="storefront-outline"></ion-icon><input type="text" class="address" value="USA, 111 Main Road"></div>
+        </div>
+        <div>
+            <button id="btnSave">Save</button>
+        </div>
+    </div>
+</body>
+</html>

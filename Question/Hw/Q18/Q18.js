@@ -19,12 +19,7 @@ function currentCalendar(date) {
             days[dayCount].innerHTML = countdate++;
         }  
     }
-
-    
-       
-       
-       
-   
+  
    
 }
 // for check input length of Month and Year when user type input

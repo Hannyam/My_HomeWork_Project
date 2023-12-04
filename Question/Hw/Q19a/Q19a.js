@@ -44,7 +44,7 @@ function clickCard(obj) {
         document.getElementById(userclickId).style.transform="rotateY(180deg)";  
         document.getElementById(userclickId).style.transition="transform 0.8s";
         mycard1id=userclickId;
-        let backid=document.getElementById(userclickId).lastElementChild.id; // 5
+        let backid=document.getElementById(userclickId).lastElementChild.id; // 5 ( card 1 id )
         let url=document.getElementById(backid).style.backgroundImage; // url("./img/sunflower.jpg")
         mycard1img=url.substring(4,url.length-1);//   "./img/sunflower.jpg"
        
@@ -52,8 +52,7 @@ function clickCard(obj) {
         mycard1=document.getElementById(mycard1id);//control for double click
         mycard1.disabled=true;
        
-    }
-    else{  // for card 2 
+    } else{  // for card 2 
         document.getElementById(userclickId).style.transform="rotateY(180deg)";
         document.getElementById(userclickId).style.transition="transform 0.8s";
 

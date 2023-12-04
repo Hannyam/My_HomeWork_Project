@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+/* div for show random a to z */
+#randomchar{
+ font-size: 50px;
+ text-align: center;
+ letter-spacing: 20px;
+ margin: 30px; 
+}
+/* div for user's type words in btn */
+.typebtnDiv{
+  text-align: center;
+}
+.typebtn{
+  color: black;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: rgb(108, 248, 80);
+  box-shadow: 5px 5px 10px  #474343, -5px -5px 10px #fff8f8;
+  font-size: 20px;
+  margin-left: 10px;
+  outline: none;
+  border-radius: 10px;
+}
+/* div for correct and miss */
+.mark{
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.correctWord{
+    color: darkgreen;
+}
+.missWord{
+    color: red;
+}
+
+.wordpm,.show{
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+/* this is for keyboard part */
+.container{
+    padding: 30px 0px 0px 0px;
+    
+    /* padding-left: 20%;    */
+}
+.row{
+  width: 100%;
+  height:60px;
+}
+.one,.two,.three,.four,.five{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.row>button,.row .caps{
+  color: black;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: rgb(229, 95, 229);
+  box-shadow: 5px 5px 10px  #474343, -5px -5px 10px #fff8f8;
+  font-size: 20px;
+  margin-left: 10px;
+  outline: none;
+  border-radius: 10px;
+}
+
+.row>.clear{
+  width: 115px;
+  border-radius: 10px;
+}
+.row>.tab,.row>.slash{
+  width:85px;
+  border-radius: 10px;
+}
+.row .caps{
+  width:100px;
+  border-radius: 10px;
+}
+
+.row>.enter{
+  width:135px;
+  border-radius: 10px;
+}
+.row>.shift{
+  width: 150px;
+  border-radius: 10px;
+}
+.five>.space{
+  width: 400px;
+}
+.five>button{
+  width: 82px;
+}
+.one,.five{
+  display: none;
+}
+

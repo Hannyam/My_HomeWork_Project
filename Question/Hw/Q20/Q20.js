@@ -92,7 +92,7 @@ const products = [
       }
       // stock 0 or not
       function soldOut(stock) {
-        return stock==0 ? "Sold Out": stock + " left";
+        return stock<0 ? "Sold Out": stock + " left";
       
       }
 
@@ -128,10 +128,7 @@ const products = [
           <p class="oldprice ${notshow}">${value.pPrice} MMK</p>
           <p class="newprice"> ${discountedPrice} </p>
           <p class="off"> ( ${value.pDiscount}% off )</p>
-
        </div>
-
-
       </div> 
        `;
     } 
