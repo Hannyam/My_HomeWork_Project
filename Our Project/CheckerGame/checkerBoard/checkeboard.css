@@ -1,0 +1,679 @@
+*{
+	font-family: 'Kalam', cursive;
+  }
+  body {
+	font-family: 'Kalam', cursive;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f4f4f4;
+  }
+  
+  .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	display: none;
+  }
+  
+  /* show to select theme */
+  #justShow {
+	display: flex;
+	align-items: center;
+	height: 50vh;
+	width: auto;
+	font-style: italic;
+	font-family: 'Kalam', cursive;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 30px;
+	margin: auto;
+	background-image: linear-gradient(rgba(200, 114, 52, 1), rgba(245, 173, 120, 1), rgba(248, 229, 215, 1), white);
+	/* background-image: linear-gradient(cyan,yellow,pink);  */
+	box-shadow: 0 0 30px rgb(54, 53, 53);
+	animation: boardAnimation 3s -1.5s 2 alternate;
+	/* display: none; */
+  }
+  
+  #justshow h1 {
+	margin-top: auto;
+  }
+  
+  /* full design for checker board section*/
+  .fullboard {
+	margin: 3% 0 8% 0;
+	position: relative;
+	animation: boardAnimation 3s -1.5s 1 alternate;
+  }
+  
+  .boardcol {
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+	height: 40px;
+  }
+  
+  .boardrow {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-weight: bold;
+	position: absolute;
+	left: -4%;
+	height: 500px;
+  }
+  
+  #board {
+	margin: auto;
+	width: 480px;
+	height: 480px;
+	border: 15px solid #471f02;
+	box-shadow: 10px 15px 8px 10px #888888;
+	background-color: brown;
+	transition: border 2s ease;
+	/* transform: rotate(30deg) skew(-35deg);
+	transform: rotate(-30deg) skew(25deg); */
+  }
+  
+  #board:hover {
+	box-shadow: -50px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .square {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #eee; */
+	/* border: 1px solid #ddd; */
+	cursor: pointer;
+	transition: background-color 2s ease;
+  
+  }
+  
+  .whiteSquare {
+	background-color: white;
+  
+  }
+  
+  /* .blackSquare {
+  background-color: black; 
+  } */
+  .classicSquare {
+	background-color: #8B4513;
+  }
+  
+  .row {
+	display: flex;
+	background-color: transparent;
+  }
+  
+  .player , .king{
+	width: 80%;
+	height: 80%;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 1px solid wheat;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .one , .kingOne{
+	background-color: white;
+	box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .two ,.kingTwo {
+	background-color: rgb(49, 45, 45);
+	box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .movable {
+	background-color: rgb(241, 250, 219);
+	border-radius: 11px;
+  }
+  
+  .kingMovable {
+	  background-color: rgb(247, 254, 166);
+	  border-radius: 13px;
+  }
+  .kingTakeable{
+	background-color: #fe6c6c;
+	border-radius: 13px;
+  }
+  
+  .takeable {
+	background-color: rgb(240, 104, 102);
+	border-radius: 13px;
+  }
+  
+  .kingLogo {
+	width: 80%;
+	height: 80%;
+	margin-top: 4px;
+	display: none;
+  }
+  
+  .kingLogo i {
+	font-size: 34px;
+	color: #efefad;
+	text-shadow: 0 0 5px black;
+	animation: boardAnimation 3s -1.5s 1 alternate;
+  }
+  /* full design for checker board section end*/
+  
+  /* Change Theme CSS styles here */
+  .default .square {
+	background-color: #8B4513;
+  }
+  
+  .default .whiteSquare {
+	background-color: #ffffff;
+  }
+  
+  .default .player.one {
+	background-color: white;
+  }
+  
+  .default .player.two {
+	background-color: rgb(49, 45, 45);
+  }
+  
+  .default .empty {
+	background-color: transparent;
+  }
+  
+  .default .movable {
+	background-color: rgb(241, 250, 219);
+  }
+  
+  .default .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  .dark .square {
+	background-color: #333333;
+  }
+  
+  .dark .whiteSquare {
+	background-color: #555555;
+  }
+  
+  .dark .player.one {
+	background-color: white;
+  }
+  
+  .dark .player.two {
+	background-color: black
+  }
+  
+  .dark .empty {
+	background-color: transparent;
+  }
+  
+  .dark .movable {
+	background-color: rgb(209, 236, 249);
+  }
+  .dark .kingMovable {
+	  background-color: rgb(172, 254, 166);
+  }
+  
+  .dark .kingTakeable{
+	background-color: #fe6c6c;
+  }
+  
+  .dark .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  .light .square {
+	background-color: rgb(234, 226, 226);
+  }
+  
+  .light .whiteSquare {
+	background-color: #ffffff;
+  }
+  
+  .light .player.one {
+	background-color: white;
+  }
+  
+  .light .player.two {
+	background-color: rgb(81, 77, 77);
+  }
+  
+  .light .empty {
+	background-color: transparent;
+  }
+  
+  .light .movable {
+	background-color: rgb(249, 251, 182);
+  }
+  .light .kingMovable {
+	  background-color: rgb(245, 186, 252);
+  }
+  .light .kingTakeable{
+	background-color: #fe6c6c;
+  } 
+  
+  .light .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  .wooden .square {
+	background-color: #d7ba89;
+  }
+  
+  .wooden .whiteSquare {
+	background-color: #f0f0f0;
+  }
+  
+  .wooden .player.one {
+	background-color: #ab6f36;
+  }
+  
+  .wooden .player.two {
+	background-color: rgb(47, 45, 50);
+  }
+  
+  .wooden .empty {
+	background-color: transparent;
+  }
+  
+  .wooden .movable {
+	background-color: rgb(243, 254, 169);
+  }
+  .wooden .kingMovable {
+	  background-color: rgb(176, 219, 254);
+  }
+  .wooden .kingTakeable{
+	background-color: #fe6c6c;
+  } 
+  
+  .wooden .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  .red .square {
+	background-color: #de0a26;
+  }
+  
+  .red .whiteSquare {
+	background-color: black;
+  }
+  
+  .red .player.one {
+	background-color: #f2e6db;
+  }
+  
+  .red .player.two {
+	background-color: rgb(50, 45, 45);
+  }
+  
+  .red .empty {
+	background-color: transparent;
+  }
+  
+  .red .movable {
+	background-color: rgb(248, 207, 215);
+  }
+  .red .kingMovable {
+	  background-color: rgb(176, 232, 254);
+  }
+  .red .kingTakeable{
+	background-color: #f0abff;
+  } 
+  
+  .red .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  .green .square {
+	background-color: #568203;
+  }
+  
+  .green .whiteSquare {
+	background-color: #D0F0C0;
+  }
+  
+  .green .player.one {
+	background-color: #f5fef6;
+  }
+  
+  .green .player.two {
+	background-color: rgb(50, 45, 45);
+  }
+  
+  .green .empty {
+	background-color: transparent;
+  }
+  
+  .green .movable {
+	background-color: rgb(249, 202, 238);
+  }
+  .green .kingMovable {
+	  background-color: rgb(255, 253, 209);
+  }
+  .green .kingTakeable{
+	background-color: #fe6c6c;
+  } 
+  .green .takeable {
+	background-color: rgb(254, 140, 161);
+  }
+  
+  /* Change Theme CSS styles here end*/
+  
+  /* theme btn and Back Menu btn */
+  .theme {
+	margin-top: 20px;
+  }
+  .theme button,
+  .game button,
+  .showplayer button,
+  #backMenu,
+  #playBtn,
+  .win button  {
+	margin: 3px;
+	border-radius: 10px;
+	height: 30px;
+	font-family: 'Kalam', cursive;
+	transition: all 0.1s ease;
+	cursor: pointer;
+	border: none;
+	border-bottom: 1px solid black;
+	/* display: none;  */
+  }
+  
+  .theme button:hover,
+  .backMenu button:hover,
+  .game button:hover,
+  .showplayer button:hover,
+  .win button:hover{
+	transform: scale(1.1, 1.1);
+  }
+  
+  #backMenu,
+  #playBtn {
+	margin: 0 10px 20px 10px;
+	width: 250px;
+	height: 50px;
+	/* background-color: lightgreen; */
+	font-size: large;
+  }
+  
+  .game {
+	display: none;
+	margin-top: -20px;
+  }
+  
+  .game button {
+	/* display: none; */
+	height: 43px;
+	font-size: 20px;
+	margin: 20px;
+  
+  }
+  
+  ion-icon {
+	font-size: 20px;
+  }
+  
+  #micButton {
+	cursor: pointer;
+	font-size: 30px;
+	margin-top: 30px;
+	color: #652c03;
+  }
+  /* theme btn and Back Menu btn section  end*/
+  
+  /* Showing player */
+  .showplayer {
+	width: 560px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Kalam', cursive;
+	font-size: 20px;
+	position: relative;
+	display: none;
+	margin-top: 5px;
+  }
+  .swap ion-icon{
+   font-size: 30px;
+  }
+  .showplayer button {
+	width: 60px;
+	height: 40px;
+	font-size: 25px;
+	/* background-color: #e7fc7f; */
+  }
+  
+  .showplayer #playerOne {
+	border-top: 2px solid darkorchid;
+	background-color: #36ed3c;
+  }
+  
+  .showplayer #playerTwo {
+	border-top: 2px solid deeppink;
+  }
+  
+  #playerOne:hover {
+	background-color: #e3f982;
+  }
+  
+  #playerTwo:hover {
+	background-color: #dba0fd;
+  }
+  
+  .showplayer .p1,
+  .showplayer .p2 {
+	position: absolute;
+	top: -95%;
+	/* display: none; */
+  }
+  
+  .showplayer .p1 {
+	color: #a920f8;
+  }
+  
+  .showplayer .p2 {
+	color: #60045a;
+  }
+  #playerOneEat,#playerTwoEat{
+	color: red;
+  }
+  
+  /* For win Case*/
+  .win{
+	width: 100%;
+	height: 100vh;
+	/* background-color: aqua; */
+	background-size: 300% 300%;
+	background-image: linear-gradient(-45deg,red,rgb(252, 135, 198),skyblue,rgb(254, 254, 118),green);
+	animation: animate 14s ease infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+  
+  }
+  .winbox,.losebox{
+	width: 30%;
+	height: 40vh;
+	margin: auto;
+	margin-top: 10%;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px black;
+	background-color: antiquewhite;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	animation: blink 1s ease 1;
+	display: none;
+	/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  }
+  .winbox div ,.losebox div{
+	font-size: 40px;
+	margin: auto;
+  }
+  .wincolor{
+	color: green;
+	text-shadow: 3px 3px 5px grey;
+  }
+  .losecolor{
+	color: deeppink;
+	text-shadow: 3px 3px 5px grey;
+  }
+  .wincolor ion-icon{
+	color: darkorange;
+	font-size: 44px;
+	animation: blink 0.5s infinite;
+	
+  }
+  .win button{
+	width: 130px;
+	height: 60px;
+	margin: 10px;
+	font-size: 20px;
+  }
+  
+  @keyframes animate {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+  }
+  
+  @keyframes blink {
+	0% {
+	  opacity: 1;
+	  transform: scale(1.3);
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  /* style for animation */
+  @keyframes hideAnimationR {
+	0% {
+	  transform: scale(2, 2) rotate(180deg);
+	}
+  
+	50% {
+	  transform: scale(2, 2) rotate(10deg) translateY(50vh);
+	}
+  
+	100% {
+	  transform: scale(0, 0) translateY(50vh);
+	}
+  }
+  
+  @keyframes hideAnimationT {
+	0% {
+	  transform: scale(2, 2);
+	}
+  
+	/* 50% {
+		transform: scale(1,1);
+	  } */
+	100% {
+	  transform: scale(0, 0);
+	}
+  }
+  
+  @keyframes boardAnimation {
+	0% {
+	  transform: scale(1, 1);
+	  opacity: 0.5;
+	}
+  
+	50% {
+	  transform: scale(0, 0);
+	}
+  
+	100% {
+	  transform: scale(1, 1);
+	}
+  }
+  
+  /* command Btn */
+  .command {
+	position: absolute;
+	top: 30%;
+	right: 20%;
+	animation: boardAnimation 3s -0.5s 1 alternate;
+	display: none;
+  }
+  #cmdBtn {
+	width: 180px;
+	height: 40px;
+	font-family: 'Kalam', cursive;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 2px 8px 0 #2f3f30;
+	background-color: #0da518;
+	color: white;
+	font-size: 16px;
+  
+  }
+  #cmdBtn:active {
+	box-shadow: 2px 2px 0px #2f3f30;
+	transform: translateY(5px);
+  }
+  
+  /* voice Command Explanation Part*/
+  #explainMenu ion-icon{
+	font-size: 30px;
+  }
+	#explainMenu {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		background-color: #9c8b6f;
+		color: #fff;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		border-radius: 10px;  
+	   
+	}
+	#explainMenu .title{
+		 margin: auto;
+	}
+	#open-explain-btn{
+	  position: absolute;
+	  bottom: 10%;
+	  left: 30px;
+	  cursor: pointer; 
+	  color: darkred;
+	  display:none;
+	}
+  
+	#explain-close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		font-size: 30px;        
+	}
+  
+  

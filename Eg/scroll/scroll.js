@@ -10,6 +10,10 @@ $(document).ready(function() {
     });
 
 
+    let link="https://youtube.com/watch?v=zqGW6x_5N0k";
+    let id=link.slice(28);
+    console.log(id);
+
 
 
 

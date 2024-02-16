@@ -1,34 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typed Number Display</title>
+    <title>Speech Recognition Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #chat-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        #chat-messages {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .user-message,
+        .bot-message {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+        }
+
+        .user-message {
+            background-color: #99ccff;
+        }
+
+        .bot-message {
+            background-color: #77ec92;
+        }
+
+        #input-container {
+            margin-top: 20px;
+        }
+
+        #user-input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        #speak-button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-
-    <h1>Typed Number Display</h1>
-    
-    <p>Press a number key on your keyboard:</p>
-
-    <p id="typedNumber"></p>
+    <div id="chat-container">
+        <ul id="chat-messages"></ul>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="speak-button">Speak</button>
+        </div>
+    </div>
 
     <script>
-        // Function to handle keyup event
-        function displayTypedNumber(event) {
-            // Get the key code of the pressed key
-            var keyCode = event.keyCode;
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const speakButton = document.getElementById('speak-button');
 
-            // Check if the pressed key is a number (48-57 corresponds to the numeric keys)
-            if (keyCode >= 48 && keyCode <= 57) {
-                // Display the typed number
-                document.getElementById("typedNumber").innerHTML = "Typed Number: " + String.fromCharCode(keyCode);
+        function addMessage(message, sender) {
+            const li = document.createElement('li');
+            li.className = sender === 'user' ? 'user-message' : 'bot-message';
+            li.textContent = message;
+            chatMessages.appendChild(li);
+        }
+
+        function processUserInput() {
+            const userMessage = userInput.value;
+            if (userMessage.trim() !== '') {
+                addMessage(userMessage, 'user');
+                // You can implement the chatbot logic here and generate a bot response.
+                // For simplicity, let's just echo the user's message as the bot's response.
+                addMessage(userMessage, 'bot');
+                userInput.value = '';
             }
         }
 
-        // Attach the keyup event listener to the document
-        window.addEventListener("keyup", displayTypedNumber);
-    </script>
+        /* To reply */
+        const synth = window.speechSynthesis;
+        let utter = new SpeechSynthesisUtterance("Hi, How are you");
+        utter.onend = () => {
+          handleSpeechRecognition();
+        };
 
+
+
+        function handleSpeechRecognition() {
+            const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+            recognition.lang = 'en-US';
+
+            recognition.onresult = function (event) {
+                const result = event.results[0][0].transcript;
+                addMessage(result, 'user');
+                console.log(result);
+               
+               
+                // Bot responses based on user input
+    if (result === "Hello.") {
+        botResponse("Hi, How are you?");
+         // For simplicity,  just echo the user's speech as the bot's response.
+        
+    } else if (result === "Goodbye.") {
+        botResponse("OK, bye. Hope to see you soon");
+       
+    } else if (result === "Love you.") {
+        botResponse("Oh! I love you more...");
+        
+    }
+
+            };
+
+            recognition.start();
+        }
+
+        function botResponse(reply) {
+        // Speak the reply
+        utter.text = reply;
+        synth.speak(utter);
+
+        // Display the bot's response in the chat
+        addMessage(reply, 'bot');
+    }
+
+        speakButton.addEventListener('click', processUserInput);
+        speakButton.addEventListener('touchstart', processUserInput);
+        speakButton.addEventListener('mousedown', handleSpeechRecognition);
+    </script>
 </body>
+
 </html>

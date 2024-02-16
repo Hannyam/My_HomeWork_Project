@@ -1,0 +1,318 @@
+/* hide & show part are....
+.mainPart / .listContainer / .list / .mvPart / #linkPart (yb link) / #playerPart 
+*/
+
+
+:root {
+  --mybgcolor: #f7f6e7;
+  --mycardcolor: #fadfa1;
+  --mybtncolor: #f1a177 ;
+  --myhovercolor: #fa6095;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+/* show startPart Main */
+.card {
+  transition: all 0.3s linear;
+}
+
+.card:hover {
+  transform: scale(1.3, 1.2);
+  margin: 40px;
+}
+
+.card p {
+  font-size: 20px;
+  position: relative;
+}
+
+/* get year */
+.collectyear {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card:hover .collectyear {
+  display: flex;
+
+}
+
+.typedYear {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5%;
+  text-align: center;
+}
+
+.showBtn {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* main Part */
+.mainPart {
+  height: 93vh;
+  background-color: var(--mybgcolor);
+  display: none;
+}
+
+/* To Hide From Js */
+.listContainer {
+  width: 98vw;
+  height: 30vh;
+  /* display: none; */
+ 
+}
+
+/* mvlistDiv -- list Part */
+
+.list {
+  /* background-color: #a6ca5e; */
+  padding: 20px 0px 20px 0px;
+  display: block;
+  padding-top: 5%;
+  position: relative;
+}
+
+.mvlist {
+  height: 50px;
+  
+}
+
+.mvlist,
+.mvlistTitle {
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-size: 20px;
+  font-weight: bolder;
+  /* border: 1px solid red; */
+  text-align: left;
+}
+
+.mvlistTitle {
+  font-size: 30px;
+}
+
+.mvlist span {
+  margin-right: 18px;
+}
+
+.mvlist>p,
+.mvlistTitle>p { 
+  width: 15%;
+  padding: 10px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#icon ion-icon{
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  margin-top: 0px;
+} 
+.mvlist #icon{
+  margin: 3px;
+}
+
+/* position & title from list */
+.mvlist>#pos,
+.mvlistTitle>#pos {
+  width: 5%;
+}
+.mvlistTitle #title{
+ margin-left: 20px;
+}
+
+.mvlistTitle>#title{
+  width: 50%;
+}
+.mvlist>#title {
+  width: 80%;
+  
+}
+.mvlistTitle>#view,.mvlist>#view , .mvlist>#date 
+ {
+  width: 15%; 
+}
+.mvlistTitle>#view{
+  margin-left: 20px;
+}
+
+
+/* hide data of id and link */
+#vdid {
+  display: none;
+}
+
+.mvlistTitle>#link , .mvlistTitle>#date{
+  margin-left: 70px;
+}
+
+.mvlist:hover {
+  background-color: var(--myhovercolor);
+}
+
+/* back to previous page    */
+#gotocart {
+  margin: 20px 0px 0px 20px;
+
+}
+
+#gotolist {
+  padding: 10px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+#gotocart>ion-icon,
+#gotolist>ion-icon {
+  font-size: 40px;
+}
+
+#gotocart>ion-icon:hover,
+#gotolist>ion-icon:hover {
+  color: var(--myhovercolor);
+}
+
+/* Mv play div */
+.mvPart {
+  position: relative;
+  background-color: var(--mybgcolor); 
+  padding: 20px 0px 20px 0px;
+  display: none;
+
+}
+
+.mvPart>h1,
+.yblink,
+#mvTitle {
+  font-family: 'Kalam', cursive;
+  font-size: 25px;
+  text-align: center;
+}
+.mvPart>h1{
+  font-size: 34px;
+  font-family: 'Acme', sans-serif;
+  color: #0e3746;
+}
+
+#yblink {
+  border: 3px dashed rgba(20, 1, 21, 0.5);
+  color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+#yblink:hover{
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.click {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mvs{
+  background-color: #f7d4e0;
+  width: 70%;
+  margin: auto;
+  border-radius: 30px;
+}
+
+.mv {
+  width: 70%;
+  height: 80vh;
+  margin: 10px;
+  margin: auto;
+  /* background-color: #e8e8a3; */
+  border-radius: 10px;
+  /* border: 10px solid rgba(226, 108, 232, 0.5); */
+
+}
+
+.mv>#mvTitle {
+  padding: 50px;
+}
+
+.mv:hover {
+  color: rebeccapurple;
+}
+
+
+/* player div */
+#video-container {
+  display: flex;
+  /* flex-wrap: wrap;  */
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  border-radius: 20px;
+}
+
+iframe {
+  outline: auto;
+  position: absolute;
+  left: 4%;
+}
+
+.yblink div {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+
+/* Slider Section*/
+.slider-container {
+  height: 50vh;
+  margin: 50px auto;
+  overflow: hidden;
+  /* background-color: #a6ca5e; */
+}
+
+.slider {
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+  color: #333;
+  margin: 20px;
+  transform: translateY(-50%);
+  position: absolute;
+
+}
+.prev:hover,
+.next:hover{
+  color: var(--mybtncolor);
+}
+
+.prev {
+  left: 45%;
+  top: 90%;
+  font-size: 45px;
+}
+
+.next {
+  right: 45%;
+  top: 90%;
+  font-size: 45px;
+}
+

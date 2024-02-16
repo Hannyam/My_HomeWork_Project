@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./login.css">
+    
+    <script src="../jquery3.6.0.js"></script>
+    <script src="./login.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <!-- for font -->
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		 <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@200&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="home">
+            <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+        </div>
+        <div class="nav">
+            <div>
+                <a href="#">Music</a>
+            </div>
+            <div><a href="#">MV</a></div>
+            <div><a href="#">Movie</a></div>
+            <div><a href="#">Game</a></div>
+        </div>
+        <div class="login">
+          <a href="./login.html"><ion-icon name="person-circle-outline"></ion-icon></a>          
+        </div>
+    </header>
+    <div class="middlePart">
+        <div class="myForm">
+            <span class="closeIcon">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <!-- login Box -->
+            <div class="box loginform">
+               <h2>Login</h2>
+               <form action="#">
+               <div class="inputbox">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" id="loginUsername" required>
+                <label>Username</label>
+               </div>
+               <div class="inputbox">              
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="loginPassword" required>
+                <label>Password</label>
+               </div>
+               <button type="submit" class="btn" id="btnLogin">
+                 Login
+               </button>
+               <div class="register">
+                <p>Don't have an account?
+                    <a href="#" class="regLink">Register</a>
+                </p>
+               </div>
+              </form>
+            </div>
+             <!-- Register Box -->
+            <div class="box registration">
+                <h2>Registration</h2>
+                <form action="#">
+                <div class="inputbox">
+                
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input id="regUsername" type="text" required>
+                    <label>Username</label>
+                   </div>
+                <div class="inputbox">
+                
+                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                 <input id="regEmail" type="email" required>
+                 <label>Email</label>
+                </div>
+                <div class="inputbox">
+                 
+                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                 <input id="regPassword" type="password" required>
+                 <label>Password</label>
+                </div>
+                <button type="submit" class="btn" id="btnRegister">
+                  Register
+                </button>
+                <div class="register">
+                 <p>Already have an account?
+                     <a href="#" class="loginLink">Login</a>
+                 </p>
+                </div>
+              </form>
+             </div>
+        </div>
+    </div>
+   
+</body>
+</html>

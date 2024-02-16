@@ -1,0 +1,121 @@
+/* #D2945E color secondary  */
+/* #C67A37 color primary */
+/* #777D71
+#bbd38b
+#f7f6e7
+#dfddcs */
+:root {
+	/* light  */
+	--light-primary: #bbd38b;
+	--light-secondary: #dfddcf;
+
+	/* dark  */
+	--dark-primary: #777d71;
+	--dark-secondary: #f7f6e7;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--light-secondary);
+	position: relative;
+
+	background-image: url(./img/lightMode.jpg);
+	background-color: #cccccc;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	width: 100%;
+	height: 7vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;
+	color: white;
+	border-bottom: 1px solid gray;
+}
+
+.img {
+	width: 40%;
+	height: 93vh;
+}
+
+.img img {
+	position: absolute;
+	bottom: 0;
+	opacity: 0.7;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a > ion-icon {
+	font-size: 40px;
+}
+
+.login > ion-icon {
+	font-size: 50px;
+}
+
+.nav {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 30px;
+}
+
+.nav div {
+	margin: 20px;
+}
+
+.nav div:hover {
+	border-bottom: 3px solid red;
+	transition: border-bottom 0.3s ease-in-out;
+}
+
+.container {
+	position: absolute;
+	right: 10px;
+	top: 20%;
+	width: 45vw;
+	height: 30vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card {
+	width: 23%;
+	height: 70%;
+	background-color: rgba(251, 105, 51, 0.6);
+	/* border: 1px solid black; */
+	box-shadow: 3px 3px 10px rgb(249, 120, 73);
+	border-radius: 20px;
+
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card ion-icon {
+	font-size: 60px;
+	margin-bottom: 20px;
+}
+
+.card p {
+	font-size: 30px;
+}

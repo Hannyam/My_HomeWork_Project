@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="./movie.css" />
+
+
+		<script src="../jquery3.6.0.js"></script>
+		<script src="../script.js" defer></script>
+		<script src="./movie.js" defer></script>
+		
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+
+		 <!-- for font -->
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Rowdies&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@200&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+		<title>Movie</title>
+	</head>
+	<body>
+		<header>
+			<div class="home">
+				<a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+			</div>
+			<div class="nav">
+				<div>
+					<a href="../music/index.html">Music</a>
+				</div>
+				<div><a href="../mv/index.html">MV</a></div>
+				<div><a href="./index.html">Movie</a></div>
+				<div><a href="../game/index.html">Game</a></div>
+			</div>
+			<div class="login">
+				<ion-icon name="person-circle-outline"></ion-icon>
+			</div>
+		</header>
+
+		<div class="container startPart">
+			<div class="card" id="moviecard">
+				<ion-icon name="videocam-outline"></ion-icon>
+				<p>Movie</p>
+				<div class="chooseCount">
+					<input id="mtypedCount" class="typedCount" type="number" value="" placeholder="Type number">
+					<button id="showMovieToplist" class="showBtn">Show</button>
+				</div>
+			</div>
+			
+			<div class="card" id="seriescard">
+				<ion-icon name="play-circle-outline"></ion-icon>
+				<p>Series</p>
+				<div class="chooseCount">
+					<input id="stypedCount" class="typedCount" type="number" value="" placeholder="Type number">
+					<button id="showSeriesToplist" class="showBtn">Show</button>
+				</div>
+			</div>
+			
+		</div>
+
+		 <!--Main Part-->
+		<div class="mainPart">
+			<div class="moviePart">
+				<span id="goback"> <ion-icon name="arrow-undo"></ion-icon>To the card </span>
+				<h1>Top <span id="count"></span> Lists</h1>
+				
+				<div class="slider-container">
+					<div class="slider" id="movies-container">
+						<!-- Movie card divs as needed -->
+			
+					</div>	
+				</div>
+				</div>
+				<!-- to hide-->
+				<div class="prev"><ion-icon name="arrow-back"></ion-icon></div>
+				<div class="next"><ion-icon name="arrow-forward"></ion-icon></div>
+			</div>
+		</div>
+
+		<div class="player">
+			<span id="toback"> <ion-icon name="arrow-undo"></ion-icon>To the list</span>
+			<h1 id="trailerTitle"></h1>
+			<p class="cap">
+				<p id="description"></p>
+				<span id="year"></span> <span id="director"></span>
+			</p>
+			<iframe id="video-container" width="900" height="500" src=""
+				frameborder="0" allowfullscreen></iframe>
+		</div>
+
+	</body>
+</html>

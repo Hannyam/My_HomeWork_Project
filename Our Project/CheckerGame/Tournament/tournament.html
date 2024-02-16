@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- link css file -->
+  <link rel="stylesheet" href="../checkerBoard/checkeboard.css">
+  <link rel="stylesheet" href="./tournament.css" />
+  <!-- link js file -->
+  <script src="../jquery3.6.0.js"></script>
+  <script src="../home/home.js" defer></script>
+  <script src="../checkerBoard/checkerboard.js" defer></script>
+  <script src="./tournament.js" defer></script>
+  <script src="../checkerBoard/voicecmd.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/34ddbddb9c.js" crossorigin="anonymous"></script>
+
+  <title>Tournaments</title>
+</head>
+
+<body>
+  <div id="justShow">
+    <h1>....Please choose theme...</h1>
+  </div>
+
+  <div class="container">
+    <div class="theme">
+      <button id="defaultTheme">Default Theme</button>
+      <button id="darkTheme">Dark Theme</button>
+      <button id="lightTheme">Light Theme</button>
+      <button id="woodenTheme">Wooden Theme</button>
+      <button id="redTheme">Red Theme</button>
+      <button id="greenTheme">Green Theme</button>
+    </div>
+    <div class="game">
+      <button class="homeBtn"><ion-icon name="home"></ion-icon>&nbsp; Home</button>
+      <button class="restartBtn"><ion-icon name="refresh-outline"></ion-icon>&nbsp; Restart</button>
+      <ion-icon id="micButton" name="mic"></ion-icon>
+    </div>
+    <div class="showplayer">
+      <div>
+        <p class="p1">player 1</p>
+        <button id="playerOne" class="playericon"><ion-icon name="person"></ion-icon></button>  : &nbsp; <span id="playerOneEat"> 0 </span>
+      </div>
+      <div class="swap">
+        <ion-icon name="swap-horizontal-outline"></ion-icon>
+      </div>
+      <div>
+        <p class="p2">player 2</p>
+        <button id="playerTwo" class="playericon"><ion-icon name="person"></ion-icon></button>  : &nbsp; <span id="playerTwoEat"> 0 </span>
+      </div>
+    </div>
+    <div class="fullboard">
+      <div class="boardcol">
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+      </div>
+      <div class="boardrow">
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+      </div>
+      <div id="board"></div>
+    </div>
+
+    <div class="backMenu">
+      <button id="backMenu" class="">Back To Menu</button>
+      <button id="playBtn" class="">Play Game</button>
+    </div>
+    	<!-- audio file -->
+		<audio id="clicksound" src="../sound/click-button.mp3"></audio>
+		<audio id="winsound" src="../sound/win.wav"></audio>
+		<audio id="gameover" src="../sound/gameover.mp3"></audio>
+		<audio id="lvlup" src="../sound/lvlup.wav"></audio>
+		<div class="allsound">
+		<audio id="kingsound" src="../sound/kingsound.wav"></audio>
+		<audio id="movesound" src="../sound/playerMove.wav"></audio>
+		<audio id="takesound" src="../sound/swapSound.wav"></audio>
+		<audio id="hurtsound" src="../sound/hurt.wav"></audio>
+		</div>
+ 
+      <!-- player Menu Part -->
+  <div class="playerMenu">
+    <div id="hamburger-menu">
+      <div id="close-btn"><ion-icon name="close-sharp"></ion-icon></div>
+      <div class="player-container">
+        <div class="title">
+          <h1> Insert Player Names</h1>
+        </div>
+        <div class="chart">
+          <div class="lastround">
+            <div id="round">
+              <div class="match">
+                <div><input class="player-input" id="player1" type="text" value="Player 1" placeholder="Fill name">
+                </div>
+                <div><input class="player-input" id="player2" type="text" value="Player 2" placeholder="Fill name">
+                </div>
+              </div>
+
+              <div class="match">
+                <div><input class="player-input" id="semiwinner1" type="text" value="Player" placeholder="Fill name"
+                    readonly></div>
+              </div>
+
+            </div>
+
+            <div id="round">
+              <div class="match">
+                <div><input class="player-input" id="player3" type="text" value="Player 3" placeholder="Fill name">
+                </div>
+                <div><input class="player-input" id="player4" type="text" value="Player 4" placeholder="Fill name">
+                </div>
+              </div>
+
+              <div class="match">
+                <div><input class="player-input" id="semiwinner2" type="text" value="Player" placeholder="Fill name"
+                    readonly></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="round">
+            <div class="match">
+              <div><input class="player-input" id="winner" type="text" value="Winner" placeholder="Fill name" readonly>
+              </div>
+            </div>
+
+          </div>
+        <!-- div for connector line -->
+          <div class="hrline1 hrl"></div>
+          <div class="hrline2 hrl"></div>
+          <div class="hrline3 hrl"></div>
+          <div class="hrline4 hrl"></div>
+          <div class="hrline5 hrl"></div>
+          <div class="hrline6 hrl"></div>
+          <div class="hrline7 hrl"></div>
+          <div class="hrline8 hrl"></div>
+          <div class="hrline9 hrl"></div>
+
+          <div class="vrline1 vrline"></div>
+          <div class="vrline2 vrline"></div>
+          <div class="vrline3 vrline"></div>
+
+          <div class="trophy">
+            <ion-icon name="trophy"></ion-icon>
+          </div>
+
+        </div>
+
+        <div>
+          <button id="startPlayerBtn">Start</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="main-content">
+      <div id="open-menu-btn"><ion-icon name="menu"></ion-icon> Open Player Menu</div>
+    </div>
+
+  </div>
+  <!-- Leader Board Part -->
+  <div class="boardMenu">
+    <div id="board-hamburger-menu">
+      <div id="board-close-btn"><ion-icon name="close-sharp"></ion-icon></div>
+      <div class="board-container">
+        <div class="title">
+          <h1>" Leaderboard "</h1>
+        </div>
+        <!-- list of the board - win player -->
+        <div class="boardList">
+          <div class="leaderboard-item listTitle">
+            <p class="rankk">Rank</p>
+            <p class="namee">Player</p>
+            <p class="scoree">Score</p>
+          </div>
+           <!-- Insert - win player -->
+          <div class="items">
+             <!--Section to Insert dynamically - win player -->
+            <!-- <div class="leaderboard-item">
+              <p class="rank">1</p>
+              <p class="name">Mark</p>
+              <p class="score">7</p>
+            </div>
+            <div class="leaderboard-item">
+              <p class="rank">2</p>
+              <p class="name">Hanbin</p>
+              <p class="score">5</p>
+            </div>
+            <div class="leaderboard-item">
+              <p class="rank">3</p>
+              <p class="name">Bobby</p>
+              <p class="score">4</p>
+            </div>
+            <div class="leaderboard-item">
+              <p class="rank">4</p>
+              <p class="name">Jin</p>
+              <p class="score">3</p>
+            </div>
+            <div class="leaderboard-item">
+              <p class="rank">5</p>
+              <p class="name">Bam Bam</p>
+              <p class="score">2</p>
+            </div>
+            <div class="leaderboard-item">
+              <p class="rank">6</p>
+              <p class="name">Taeyong</p>
+              <p class="score">1</p>
+            </div> -->
+            <!--Section to Insert dynamically - win player -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="open-board-btn"><ion-icon name="menu"></ion-icon> Open Leaderboard</div>
+    </div>
+
+  </div> 
+
+  <!-- explain Menu Part -->
+  <div class="exp">
+    <div id="explainMenu"> 
+    <div id="explain-close-btn"><ion-icon name="close-sharp"></ion-icon></div>
+  
+      <div class="title">
+        <h1> Voice Command Explanation</h1>
+      </div> 
+      
+      <div class="box">
+       <p> You can use these commands....</p>
+      </div>
+
+    </div>
+    <div id="open-explain-btn"><ion-icon name="menu"></ion-icon> Open Explanation</div>
+    </div>
+
+  </div>
+
+
+
+  <div class="command">
+    <button id="cmdBtn">Click To Command <ion-icon name="mic"></ion-icon></button>
+ 
+  </div>
+ 
+   <!-- Case For Win -->
+	<div class="win">
+		<div class="winbox">
+			<div class="wincolor">Congratulations !</div>
+			<div class="wincolor"><span>...You Win... </span><ion-icon name="sparkles"></ion-icon> </div>
+			<div class="lastgame">
+				<button class="homeBtn"><ion-icon name="home"></ion-icon>&nbsp; Home</button>
+				<button class="replayBtn"><ion-icon name="refresh-outline"></ion-icon>&nbsp;Restart</button>
+			</div>
+		</div>
+
+	</div>
+
+
+    
+      
+
+</body>
+</html>

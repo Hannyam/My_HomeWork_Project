@@ -1,0 +1,257 @@
+*{
+  font-family: 'Kalam', cursive;
+}
+/*
+*
+*/
+
+/* Player MenuPart ----hamburger Mwnu*/
+
+ #main-content{
+       position: absolute;
+        top: 0;
+        left: 0;
+ }
+ #open-menu-btn{
+    margin: 20px 0 0px 30px;
+ }
+  .playerMenu ion-icon{
+    font-size: 30px;
+  }
+    #hamburger-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #9c8b6f;
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;  
+       
+    }
+    #hamburger-menu .title{
+         margin: auto;
+    }
+
+    #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 30px;        
+    }
+
+    /* Btn Session */
+    #startPlayerBtn{
+       width: 200px;
+       height: 60px;
+       border-radius: 10px;
+       margin-top: 30px;
+       font-size: 25px;
+       border: none;  
+       box-shadow: 2px 10px 0 #2f3f30;
+       background-color: #0da518;
+    }
+
+    #startPlayerBtn:active{
+      box-shadow: 2px 2px 0px #2f3f30;
+      transform: translateY(5px);
+    }
+    #startPlayerBtn:hover{
+      background-color: #3ff04a;
+    }
+    /* Btn Session */
+
+    /* Trophy*/
+    .trophy{
+      position: absolute;
+      color: gold;
+      top: 36%;
+      left: 85%;
+    }
+    .trophy ion-icon{
+     font-size: 53px;
+    }
+
+
+
+    .player-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #round{
+        margin-top: 40px;
+        width: 630px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       
+    }
+    .chart{
+        width:825px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+
+    .player-input {
+        margin-bottom: 10px;
+        width: 90px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .vrline{
+      width: 2px;
+      height: 80px;
+      background-color: black;
+      position: absolute;
+    }
+    .hrl{
+      width: 100px;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+    }
+    .vrline1{
+      left: 37.5%;
+      top: 22%
+    }
+    .vrline2{
+      left: 37.5%;
+      top: 71%
+    }
+    .vrline3{
+      left: 76%;
+      top: 33%;
+      height: 186px;
+    }
+    .hrline1{
+      left: 25.5%;
+      top: 22%;
+    }
+    .hrline2{
+      left: 25.5%;
+      top: 43%;
+    }
+    .hrline3{
+      left: 25.5%;
+      top: 71%;
+    }
+    .hrline4{
+      left: 25.5%;
+      top: 92%;
+    }
+    .hrline5{
+      left: 37.5%;
+      top: 82%;
+      width: 110px;
+    }
+    .hrline6{
+      left: 37.5%;
+      top: 32%;
+      width: 110px;
+    }
+    .hrline7{
+      left: 64%;
+      top: 33%;
+    }
+    .hrline8{
+      left: 64%;
+      top: 82%
+    }
+    .hrline9{
+      left: 76%;
+      top: 56%;
+      width:50px;
+    }
+  
+  /* Leader Board Part*/
+  .boardMenu ion-icon{
+    font-size: 30px;
+  }
+    #board-hamburger-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #9c8b6f;
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;  
+       
+    }
+    #board-hamburger-menu .title{
+         margin: auto;
+    }
+    #open-board-btn{
+      position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+       
+    }
+    #board-close-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        font-size: 30px;        
+    }
+   .board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   }
+   .board-container h1{
+       font-size: 43px;
+   }
+   .boardList{
+    background-color: #f6eb72;
+    width: 70%;
+    border-radius: 20px;
+    height: 75vh;
+    position: relative;
+   }
+   .items{
+    overflow:auto;
+    height: 60vh;
+   }
+
+    .leaderboard-item{
+      display: flex;
+      justify-content: space-around;
+      font-size: 30px;
+      border-radius: 20px;
+      background-color: rgb(17, 230, 230);
+      margin: 5px;
+    }
+    .listTitle{
+      background-color: #bd3737;
+    }
+    .boardList .rank{
+      background-color: darkorange;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 50%;
+      border: 6px solid darkorange;
+    }
+   
+  
+   

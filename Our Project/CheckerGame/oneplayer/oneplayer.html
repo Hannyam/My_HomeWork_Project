@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- link css -->
+	<link rel="stylesheet" href="../checkerBoard/checkeboard.css">
+	<link rel="stylesheet" href="./oneplayer.css" />
+	<!-- link js file -->
+	<script src="../jquery3.6.0.js"></script>
+	<script src="../home/home.js" defer></script>
+	<script src="../checkerBoard/checkerboard.js" defer></script>
+	<script src="./oneplayer.js" defer></script>
+	<script src="../checkerBoard/voicecmd.js"></script>
+	<!-- link for icon -->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<!-- icons -->
+	<script src="https://kit.fontawesome.com/34ddbddb9c.js" crossorigin="anonymous"></script>
+
+	<title>One Player Checker</title>
+
+
+</head>
+
+<body>
+
+	<div id="justShow">
+		<h1>....Please choose theme...</h1>
+	</div>
+
+	<div class="container">
+
+		<div class="theme">
+			<button id="defaultTheme">Default Theme</button>
+			<button id="darkTheme">Dark Theme</button>
+			<button id="lightTheme">Light Theme</button>
+			<button id="woodenTheme">Wooden Theme</button>
+			<button id="redTheme">Red Theme</button>
+			<button id="greenTheme">Green Theme</button>
+		</div>
+		<div class="game">
+			<button class="homeBtn"><ion-icon name="home"></ion-icon>&nbsp; Home</button>
+			<button class="restartBtn"><ion-icon name="refresh-outline"></ion-icon>&nbsp; Restart</button>
+			<ion-icon id="micButton" name="mic"></ion-icon>
+		</div>
+		<div class="showplayer">
+			<div>
+			  <p class="p1">player</p>
+			  <button id="playerOne" class="playericon"><ion-icon name="person"></ion-icon></button>  : &nbsp; <span id="playerOneEat"> 0 </span>
+			</div>
+			<div class="swap">
+			  <ion-icon name="swap-horizontal-outline"></ion-icon>
+			</div>
+			<div>
+			  <p class="p2">Bot</p>
+			  <button id="playerTwo" class="playericon"><ion-icon name="person"></ion-icon></button>  : &nbsp; <span id="playerTwoEat"> 0 </span>
+			</div>
+		  </div>
+
+		<div class="fullboard">
+			<div class="boardcol">
+				<p>0</p>
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+				<p>5</p>
+				<p>6</p>
+				<p>7</p>
+			</div>
+			<div class="boardrow">
+				<p>0</p>
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+				<p>5</p>
+				<p>6</p>
+				<p>7</p>
+			</div>
+			<div id="board"></div>
+		</div>
+
+		<div class="backMenu">
+
+			<button id="backMenu" class="">Back To Menu</button>
+			<button id="playBtn" class="">Play Game</button>
+
+		</div>
+
+		<!-- audio file -->
+		<audio id="clicksound" src="../sound/click-button.mp3"></audio>
+		<audio id="winsound" src="../sound/win.wav"></audio>
+		<audio id="gameover" src="../sound/gameover.mp3"></audio>
+		<audio id="lvlup" src="../sound/lvlup.wav"></audio>
+		<div class="allsound">
+		<audio id="kingsound" src="../sound/kingsound.wav"></audio>
+		<audio id="movesound" src="../sound/playerMove.wav"></audio>
+		<audio id="takesound" src="../sound/swapSound.wav"></audio>
+		<audio id="hurtsound" src="../sound/hurt.wav"></audio>
+		</div>
+
+		<div class="command">
+			<button id="cmdBtn">Click To Command <ion-icon name="mic"></ion-icon></button>
+		</div>
+
+		<!-- explain Menu Part -->
+		<div class="exp">
+			<div id="explainMenu"> 
+			<div id="explain-close-btn"><ion-icon name="close-sharp"></ion-icon></div>
+		  
+			  <div class="title">
+				<h1> Voice Command Explanation</h1>
+			  </div> 
+			  
+			  <div class="box">
+		
+			  </div>
+		
+			</div>
+			<div id="open-explain-btn"><ion-icon name="menu"></ion-icon> Open Explanation</div>
+	    </div>
+
+	</div>
+    <!-- Case For Win -->
+	<div class="win">
+		<div class="winbox">
+			<div class="wincolor">Congratulations !</div>
+			<div class="wincolor"><span>...You Win... </span><ion-icon name="sparkles"></ion-icon> </div>
+			<div class="lastgame">
+				<button class="homeBtn"><ion-icon name="home"></ion-icon>&nbsp; Home</button>
+				<button class="replayBtn"><ion-icon name="refresh-outline"></ion-icon>&nbsp;Restart</button>
+			</div>
+		</div>
+		
+		<div class="losebox">
+			<div class="losecolor">Sorry You lose !</div>
+			<div class="losecolor"><span>...Try Again... </span><ion-icon name="sparkles"></ion-icon> </div>
+			<div class="lastgame">
+				<button class="homeBtn"><ion-icon name="home"></ion-icon>&nbsp; Home</button>
+				<button class="replayBtn"><ion-icon name="refresh-outline"></ion-icon>&nbsp;Restart</button>
+			</div>
+		</div>
+
+	</div>
+ 
+
+</body>
+
+</html>

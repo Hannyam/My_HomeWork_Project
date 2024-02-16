@@ -14,8 +14,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 5px 5px 10px gray;
-   
+    box-shadow: 5px 5px 10px gray;  
 }
 a{
     text-decoration: none;

@@ -1,0 +1,232 @@
+:root {
+    --mybgcolor: #f8f3f0;
+    --mycardcolor: #fadfa1;
+    --mybtncolor: #f1a177 ;
+    --myhovercolor: #fa6095;
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+  /* Start Part*/
+
+  #camoviecard,#seriescard{
+    transition: all 0.3s linear;
+  }
+   #moviecard:hover, #seriescard:hover {
+     transform: scale(1.3,1.3);  
+      margin: 40px; 
+      
+  } 
+/* get count top list */
+.chooseCount{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+   }
+   .card:hover .chooseCount{
+      display: flex;
+      
+   }
+   .typedCount{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 5%;
+    text-align: center;
+   }
+   .showBtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    transition: all 1s linear;
+   }
+   .showBtn:hover{
+    background-image: radial-gradient(orangered,orange,white);
+    color: white;
+    
+   }
+  
+.moviePart {
+    position: relative;
+    background-color: var(--mybgcolor);
+    padding: 20px 20px 20px 40px;
+    height: 93vh;
+    /* display: none; */
+}
+
+.moviePart>h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 45px;
+}
+
+.movie>div {
+    margin: 10px 10px 10px 10px;
+}
+
+.movie span {
+    font-weight: bolder;
+}
+.moviePart{
+    display: none;
+}
+
+.moviePart>p {
+    color: #ffb900;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.movie:hover {
+    color: green;
+}
+.rating{
+    display: flex;
+    justify-content: space-around;
+    width: 210px;
+    /* height: 30px; */
+}
+.rating ion-icon{
+    font-size: 25px;
+}
+#rank{
+    width: 40px;
+    height: 40px;
+    margin-left: 100px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #ee3168;
+}
+
+.rating~button {
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid var(--mybtncolor);
+    color: black;
+    margin: 10px;
+    margin-left: 5%;
+}
+
+.rating~button:hover {
+    background-color: var(--myhovercolor);
+    color: white;
+}
+
+/* Player Part*/
+.player {
+    /* position: absolute; */
+    width: 100%;
+    height: 93vh;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 0, 0, .2);
+    background-color: #a6ca5e;
+    display: none;
+    font-size: 21px;
+}
+
+#description{   
+    font-family: 'Kalam', cursive;
+    font-size: 18px;
+    margin: 2px;
+}
+iframe {
+    outline: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+  #trailerTitle{
+    font-family: 'Kalam', cursive;
+  font-size: 40px;
+ 
+  }
+
+/* go to previous page*/
+#toback {
+    padding: 5px;
+    position: absolute;
+    top: 8%;
+    left: 2%;
+}
+
+#goback {
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    /* display: none; */
+}
+
+#goback>ion-icon , #toback>ion-icon {
+    font-size: 40px;
+}
+
+
+/* Slider Section*/
+  /*movie card*/
+    .slider .card {
+        min-width: 250px;
+        height: 510px;
+        /* padding: 20px; */
+        margin: 0 10px;
+        background-color: var(--mycardcolor);
+        border-radius: 8px;
+        box-shadow: 3px 4px 8px rgba(18, 3, 3, 0.1);
+        box-sizing: border-box;
+        color: black;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s linear;
+    }
+      .slider .card:hover {
+        transform: scale(1.1);
+        box-shadow: 7px 3px 10px #ffb900;
+        margin:3px 70px 5px 70px;
+      }
+
+    .slider-container {
+        width: 85%;
+        height: 73vh;
+        margin: 50px auto;
+        overflow: hidden;
+        /* position: relative; */
+       
+    }
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .prev, .next {
+        cursor: pointer;
+       font-size: 30px;
+        user-select: none;
+        color: #333;  
+        position: absolute;
+        top: 10%;
+        transform: translateY(-50%);
+        display: none;
+    }
+    .prev {
+        
+        left: 3%;
+        top: 50%;
+        font-size: 45px;
+    
+    }
+    .next {
+       
+        right: 3%;
+        top: 50%;
+        font-size: 45px;
+    }
+ 

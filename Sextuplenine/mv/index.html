@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./mv.css" />
+
+  <script src="../jquery3.6.0.js"></script>
+  <script src="../script.js" defer></script>
+  <script src="./mv.js" defer></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- for font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Rowdies&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+  <title>MV</title>
+</head>
+
+<body>
+  <header>
+    <div class="home">
+      <a href="../index.html"><ion-icon name="home-outline"></ion-icon></a>
+    </div>
+    <div class="nav">
+      <div>
+        <a href="../music/index.html">Music</a>
+      </div>
+      <div><a href="./index.html">MV</a></div>
+      <div><a href="../movie/index.html">Movie</a></div>
+      <div><a href="../game/index.html">Game</a></div>
+    </div>
+    <div class="login">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </div>
+  </header>
+  <div class="container startPart">
+    <div class="card" id="topViewweekly">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <p>Weekly Trend</p>
+    </div>
+    <div class="card" id="eMusic">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <p>English MV</p>
+    </div>
+    <div class="card" id="topViewYear">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <p>Top View by Year</p>
+      <div class="collectyear">
+        <input id="typedTYear" class="typedYear" type="num" value="" placeholder="Enter year...">
+        <button id="showtopViewYear" class="showBtn">Show Top View</button>
+      </div>
+    </div>
+    <div class="card" id="kTrendMv">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <p>Korean Trend </p>
+    </div>
+
+  </div>
+
+  <div class="mainPart">
+    <div class="listContainer">
+
+      <span id="gotocart"> <ion-icon name="arrow-undo"></ion-icon>To the category </span>
+
+      <div id="listDiv">
+        <div class="list" id="mvs-container">
+          <!-- Insert MV data  -->
+
+          <!-- del ok -->
+         <div class="unnesseryData">
+          
+            <div class="mvlistTitle">
+              <p id="pos">Rank</p>
+              <p id="title">Artist - Song </p>
+              <p id="like">Likes </p>
+              <p id="view"> Views</p>
+              <p id="date">Status</p>
+            </div>
+            <div class="slider-container">
+              <div class="slider" id="slider">
+
+                <div class="mvlist">
+                  <p id="pos"> #1</p>
+                  <p id="title"> ANIMAL: ABRAR’S ENTRY - JAMAL KUDU | BOBBY DEOL | SANDEEP VANGA | BHUSHAN KUMAR</p>
+                  <p id="like"><ion-icon name="thumbs-up-outline" role="img" class="md hydrated"></ion-icon> 512,706
+                  </p>
+                  <p id="view"><ion-icon name="eye-outline" role="img" class="md hydrated"></ion-icon> 7,828,813 </p>
+                  <p id="date">NEW</p>
+
+                  <p id="vdid">h?v=wv7XUzlVi3Y</p>
+                </div>
+                <div class="mvlist">
+                  <p id="pos"> #1</p>
+                  <p id="title"> ANIMAL: ABRAR’S ENTRY - JAMAL KUDU | BOBBY DEOL | SANDEEP VANGA | BHUSHAN KUMAR</p>
+                  <p id="like"><ion-icon name="thumbs-up-outline" role="img" class="md hydrated"></ion-icon> 512,706
+                  </p>
+                  <p id="view"><ion-icon name="eye-outline" role="img" class="md hydrated"></ion-icon> 7,828,813 </p>
+                  <p><p id="icon"><ion-icon name="logo-youtube"></ion-icon></p></p>
+
+                  <p id="vdid">h?v=wv7XUzlVi3Y</p>
+                </div>
+
+                 <span class="prev"><ion-icon name="arrow-up-circle-outline"></ion-icon></span>
+          <span class="next"><ion-icon name="arrow-down-circle-outline"></ion-icon></span> 
+
+              </div>
+            </div>
+
+          </div>
+         <!-- del ok -->
+        </div>
+      </div>
+    </div>
+    <!-- Show Mv or Youtube link -->
+    <div class="mvPart">
+      <h1>~~~~ Music Video ~~~~~</h1>
+      <span id="gotolist"> <ion-icon name="arrow-undo"></ion-icon>To the list... </span>
+      <div class="mvs">
+        <div class="mv">
+          <h1 id="mvTitle"> </h1>
+          <div id="playerPart">
+          </div>
+          <div class="yblink" id="linkPart">
+            <h1> YouTube Video link</h1>
+            <div><a id="yblink" href="" target="_blank">Click here to watch the video on YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

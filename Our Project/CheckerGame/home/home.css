@@ -1,0 +1,154 @@
+*{
+  /* outline: auto; */
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  
+}
+
+.container {
+  text-align: center;
+  width: 30%;
+  margin-top: 10%;
+ 
+}
+
+h1 {
+  font-size: 3.5em;
+  color: black;
+  margin-bottom: 20px;
+  font-family: 'Kalam', cursive;
+  letter-spacing: 20px;
+  text-shadow: 2px 2px 10px #333;
+  position: absolute;
+  width: 28%;
+  top: 5%;
+  left: 35%;
+}
+
+.checker-pieces{
+  display: flex;
+}
+.checker-piece {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: darkgreen;   
+  border: 2px solid rgba(52, 44, 44,0.5);
+  box-shadow: 3px 2px 5px gray;
+  animation: pieceAnimation 1s infinite alternate;
+}
+.p1{
+  animation-delay: 0.3s;
+  background-color: black;
+}
+.p3{
+  animation-delay: -1s;
+  background-color: red;
+}
+.p4{
+  animation-delay: -0.5s;
+  background-color: burlywood;
+}
+.p5{
+  animation-delay: -0.8s;
+  background-color: white;
+}
+
+
+/* Main Btn */
+.choose button{
+  height: 17vh;
+  width: 70%;
+  margin: 20px;
+  font-weight: bolder;
+  text-shadow: 1px 2px 3px;
+  font-size: 30px;
+  font-family: 'Preahvihear', sans-serif; 
+  /* border: 20px solid rgb(164, 85, 25); */
+  transition: all 0.3s ease;
+  
+  border-width: 5px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom,
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+  box-shadow: 0 0 10px gray;
+
+}
+
+/* .choose .oneplayerBtn{
+background: linear-gradient(to right, rgb(123, 169, 8), rgb(221, 190, 52));
+
+}
+.choose .twoplayerBtn{
+background: linear-gradient(to right, rgb(162, 36, 247), rgb(212, 77, 212));
+} */
+
+.oneplayerBtn:hover,.twoplayerBtn:hover,.tourBtn:hover{
+ transform: scale(1.1,1.1);
+ border-color: rgb(221, 147, 90);
+}
+.oneplayerBtn:hover{
+background: linear-gradient(to right, rgb(193, 229, 101), rgb(216, 192, 83));
+
+}
+.twoplayerBtn:hover{
+background: linear-gradient(to right, rgb(194, 121, 243), rgb(229, 101, 229));
+}
+
+.tourBtn:hover{
+background: linear-gradient(to right, rgb(243, 217, 121), rgb(252, 99, 135));
+}
+
+@keyframes pieceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-110px);
+  }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1024px) {
+h1 {
+    font-size: 2em;
+}
+
+.checker-piece {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    font-size: 6em;
+}
+.container {
+  margin-top: 10%;
+  width: auto;
+  /* background-color: pink; */
+}
+}
+
+@media only screen and (max-width: 480px) {
+.container {
+    margin-top: 30%;
+}
+
+button {
+  font-size: 2em;
+  width: 200px;
+}
+}
+
+
+

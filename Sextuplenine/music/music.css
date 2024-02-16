@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  height: 100vh;
+  min-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(17, 94, 68); */
+  min-width: 300px;
+}
+header {
+  position: absolute;
+  top: 0px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid green;
+}
+.main {
+  position: inherit;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 1600px;
+  /* height: 100vh; */
+
+  margin: 5px;
+  margin-top: 10px;
+
+  border-radius: 20px;
+  box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -moz-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  background-color: yellow;
+}
+.container {
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1000px;
+  border: 1px solid blue;
+  background-color: red;
+}
+.search {
+  width: 60%;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid green;
+  padding-left: 10px;
+  margin: 10px;
+}
+.songCard {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  max-width: 250px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -moz-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+}
+.image {
+  overflow: hidden;
+  width: 40%;
+  height: 60px;
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 10px;
+  border: 1px solid red;
+}
+.des {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  height: 60px;
+  margin: 5px;
+  margin-top: 10px;
+}
+.album,
+.artist {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.songCard img {
+  width: 100%;
+}
+.player {
+  height: 70%;
+  width: 300px;
+  border-radius: 20px;
+  background-color: forestgreen;
+  box-shadow: -1px -1px 18px 7px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: -1px -1px 18px 7px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: -1px -1px 18px 7px rgba(0, 0, 0, 0.68);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+.pimage {
+  display: block;
+  overflow: hidden;
+  width: 70%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px solid red;
+  border-radius: 50%;
+  box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+  -moz-box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.87);
+}
+.pimage image {
+  width: 100%;
+  border-radius: 50%;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.pdes {
+  margin-top: 10px;
+}
+.progress {
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.slier {
+  width: 55%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pstart,
+.pend {
+  font-size: 13px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.icon:hover {
+  color: darkolivegreen;
+}
+.playicon {
+  width: 50px;
+  height: 50px;
+}
+.list {
+  position: relative;
+  top: 2%;
+  left: -42%;
+  cursor: pointer;
+}
+.ptitle,
+.partist,
+.palbum {
+  margin: 5px;
+}
+.ptitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.palbum,
+.partist {
+  font-size: 13px;
+  opacity: 0.7;
+}
